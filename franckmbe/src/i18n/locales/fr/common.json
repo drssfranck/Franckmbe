@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "services": "Services",
+    "contact": "Contact",
+    "cv": "CV",
+    "hire": "Me recruter"
+  },
+  "available": {
+    "badge": "CDI Sept. 2026",
+    "full": "Disponible CDI — Septembre 2026"
+  },
+  "hero": {
+    "tag": "Disponible CDI — Septembre 2026 · Paris <50km · Télétravail OK",
+    "name": "Franck MBE",
+    "title": "Data Analyst & Data Engineer",
+    "description": "Passionné par la donnée, spécialisé en Big Data, Business Intelligence et Data Engineering. Je transforme des données brutes en décisions stratégiques — avec Python, Power BI et l'écosystème Azure.",
+    "downloadCV": "↓ Télécharger mon CV",
+    "contact": "✉ Me contacter",
+    "linkedin": "LinkedIn →"
+  },
+  "footer": {
+    "description": "Data Analyst & Data Engineer passionné par la transformation des données en décisions stratégiques. Disponible CDI Septembre 2026.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "recruiters": "Recruteurs",
+    "rights": "Tous droits réservés",
+    "seo": "Data Analyst Paris CDI 2026",
+    "contactForm": "Formulaire de contact",
+    "downloadCV": "Télécharger CV PDF",
+    "offer": "Proposer une offre CDI",
+    "consulting": "Services Consulting"
+  }
+}

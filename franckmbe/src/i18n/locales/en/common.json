@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "cv": "Resume",
+    "hire": "Hire me"
+  },
+  "available": {
+    "badge": "Available Sept. 2026",
+    "full": "Available for permanent contract — September 2026"
+  },
+  "hero": {
+    "tag": "Available for permanent contract — September 2026 · Paris <50km · Remote OK",
+    "name": "Franck MBE",
+    "title": "Data Analyst & Data Engineer",
+    "description": "Passionate about data, specialized in Big Data, Business Intelligence and Data Engineering. I transform raw data into strategic decisions — with Python, Power BI and the Azure ecosystem.",
+    "downloadCV": "↓ Download my resume",
+    "contact": "✉ Contact me",
+    "linkedin": "LinkedIn →"
+  },
+  "footer": {
+    "description": "Data Analyst & Data Engineer passionate about transforming data into strategic decisions. Available for permanent contract September 2026.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "recruiters": "Recruiters",
+    "rights": "All rights reserved",
+    "seo": "Data Analyst Paris CDI 2026",
+    "contactForm": "Contact form",
+    "downloadCV": "Download PDF resume",
+    "offer": "Submit job offer",
+    "consulting": "Consulting Services"
+  }
+}

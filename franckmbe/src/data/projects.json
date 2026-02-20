@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Dashboard Analytics Ventes",
+    "description": "Dashboard interactif Power BI pour l'analyse des ventes e-commerce avec suivi KPI temps réel, segmentation client et prévisions.",
+    "category": "dashboard",
+    "technologies": ["Power BI", "SQL", "DAX"],
+    "visual": "📊",
+    "gradient": "linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)",
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "id": 2,
+    "title": "Pipeline ETL Azure Data Lake",
+    "description": "Pipeline ETL automatisé ingérant des données multi-sources vers Azure Data Lake, avec architecture Medallion Bronze/Silver/Gold.",
+    "category": "etl",
+    "technologies": ["Python", "Azure", "SQL"],
+    "visual": "🔧",
+    "gradient": "linear-gradient(135deg, #1f2d1f 0%, #16a34a 100%)",
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "id": 3,
+    "title": "Analyse Sentiment Clients NLP",
+    "description": "Pipeline NLP d'analyse des avis clients avec scoring sentiment, visualisation Tableau et alertes thématiques automatisées.",
+    "category": "data-viz",
+    "technologies": ["Python", "Tableau", "NLTK"],
+    "visual": "🧠",
+    "gradient": "linear-gradient(135deg, #1a2e1a 0%, #059669 100%)",
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "id": 4,
+    "title": "Data Warehouse Snowflake + dbt",
+    "description": "Architecture Data Warehouse complète sur Snowflake avec transformation dbt, modélisation en étoile et documentation automatisée.",
+    "category": "etl",
+    "technologies": ["Snowflake", "dbt", "SQL"],
+    "visual": "❄️",
+    "gradient": "linear-gradient(135deg, #1f1a2e 0%, #7c3aed 100%)",
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "id": 5,
+    "title": "Dashboard Streamlit Analytics",
+    "description": "Application web analytique développée avec Streamlit et MySQL pour visualiser en temps réel les métriques produit chez Kasaltech.",
+    "category": "dashboard",
+    "technologies": ["Python", "Streamlit", "MySQL"],
+    "visual": "🚀",
+    "gradient": "linear-gradient(135deg, #1e1e2e 0%, #0891b2 100%)",
+    "link": "#",
+    "github": "#"
+  },
+  {
+    "id": 6,
+    "title": "KPI Reporting Business Travel",
+    "description": "Suite de dashboards KPI pour Fast And Sure Travel : suivi réservations, revenus, taux de conversion et satisfaction client.",
+    "category": "data-viz",
+    "technologies": ["Power BI", "Excel", "DAX"],
+    "visual": "📈",
+    "gradient": "linear-gradient(135deg, #2e1e1a 0%, #ea580c 100%)",
+    "link": "#",
+    "github": "#"
+  }
+]

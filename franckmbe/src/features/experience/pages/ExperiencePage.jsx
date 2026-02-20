@@ -1,0 +1,66 @@
+import { useEffect } from 'react'
+import cvData from '../../../data/cv.json'
+
+const ExperiencePage = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible')
+            }, i * 150)
+          }
+        })
+      },
+      { threshold: 0.05 }
+    )
+
+    document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section id="experience">
+      <div className="container">
+        <div className="reveal" style={{marginBottom:'56px'}}>
+          <div className="section-label">Parcours</div>
+          <h2 className="section-title">Expériences<br/><span className="gradient-text">Professionnelles</span></h2>
+        </div>
+        <div className="timeline">
+
+          {cvData.experiences.map((exp, index) => (
+            <div className="timeline-item" key={index}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-card">
+                <div className="timeline-meta">
+                  <span className="timeline-period">{exp.period}</span>
+                  <span className="timeline-type">{exp.type}</span>
+                </div>
+                <div className="timeline-title">{exp.title}</div>
+                <div className="timeline-company">{exp.company}</div>
+                <div className="timeline-tasks">
+                  {exp.tasks.map((task, i) => (
+                    <div className="timeline-task" key={i}>
+                      <div className="task-dot"></div>
+                      {task}
+                    </div>
+                  ))}
+                </div>
+                <div className="timeline-tags">
+                  {exp.tags.map((tag, i) => (
+                    <span className="xp-tag" key={i}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default ExperiencePage
