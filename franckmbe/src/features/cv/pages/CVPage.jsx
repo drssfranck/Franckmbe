@@ -1,12 +1,17 @@
 import cvData from '../../../data/cv.json'
 
 const CVPage = () => {
-  const allSkills = [
-    ...cvData.skills.langages,
-    ...cvData.skills.data,
-    ...cvData.skills.cloud,
-    ...cvData.skills.methodes
-  ]
+  // Extraire toutes les compétences de la structure categories
+  const allSkills = []
+
+  // Parcourir toutes les catégories de compétences
+  if (cvData.skills && cvData.skills.categories) {
+    cvData.skills.categories.forEach(category => {
+      category.items.forEach(item => {
+        allSkills.push(item.name)
+      })
+    })
+  }
 
   return (
     <section id="cv" style={{background: 'var(--bg2)'}}>
@@ -34,7 +39,7 @@ const CVPage = () => {
                 <p style={{fontSize:'0.8rem', color:'#374151', lineHeight:'1.6'}}>{cvData.profile}</p>
 
                 <div className="cv-section-title">Expériences</div>
-                {cvData.experiences.slice(0, 3).map((exp, i) => (
+                {cvData.experiences && cvData.experiences.slice(0, 3).map((exp, i) => (
                   <div className="cv-entry" key={i}>
                     <div className="cv-entry-title">{exp.title} — {exp.company}</div>
                     <div className="cv-entry-sub">{exp.period} · {exp.description}</div>
@@ -49,12 +54,19 @@ const CVPage = () => {
                 </div>
 
                 <div className="cv-section-title">Formation</div>
-                {cvData.education.slice(0, 2).map((edu, i) => (
+                {cvData.education && cvData.education.slice(0, 2).map((edu, i) => (
                   <div className="cv-entry" key={i}>
                     <div className="cv-entry-title">{edu.degree}</div>
                     <div className="cv-entry-sub">{edu.school} · {edu.year}</div>
                   </div>
                 ))}
+
+                <div className="cv-section-title">Langues</div>
+                <div className="cv-skill-pills">
+                  {cvData.languages && cvData.languages.map((lang, i) => (
+                    <span className="cv-pill" key={i}>{lang.name} · {lang.level}</span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

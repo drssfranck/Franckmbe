@@ -23,6 +23,38 @@
     "contact": "✉ Contact me",
     "linkedin": "LinkedIn →"
   },
+  "about": {
+    "label": "About",
+    "title": "Data Analyst",
+    "titleGradient": "passionate & committed"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's work",
+    "titleGradient": "together",
+    "description": "Recruiter, manager or freelance client: I'm available to discuss any permanent contract or data project opportunity.",
+    "formTitle": "Send a message",
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
+    "email": "Professional email",
+    "emailPlaceholder": "john.doe@company.com",
+    "company": "Company",
+    "companyPlaceholder": "Your company name",
+    "subject": "Subject",
+    "subjectPlaceholder": "Select a subject...",
+    "subjectCDI": "Permanent contract - Data Analyst",
+    "subjectCDIDE": "Permanent contract - Data Engineer",
+    "subjectFreelance": "Freelance / Consulting",
+    "subjectCollab": "Collaboration / Partnership",
+    "subjectOther": "Other",
+    "message": "Message",
+    "messagePlaceholder": "Describe your opportunity or data project...",
+    "send": "Send message",
+    "success": "Message sent! I'll reply within 24h.",
+    "cdiMessage": "I'm actively seeking a permanent contract as Data Analyst or Data Engineer in Paris. My apprenticeship at ENI France ends in September 2026. Feel free to contact me to discuss."
+  },
   "footer": {
     "description": "Data Analyst & Data Engineer passionate about transforming data into strategic decisions. Available for permanent contract September 2026.",
     "navigation": "Navigation",

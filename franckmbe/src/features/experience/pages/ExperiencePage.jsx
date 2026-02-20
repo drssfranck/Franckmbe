@@ -21,6 +21,9 @@ const ExperiencePage = () => {
     return () => observer.disconnect()
   }, [])
 
+  // Utiliser directement les expériences du CV
+  const experiences = cvData.experiences || []
+
   return (
     <section id="experience">
       <div className="container">
@@ -30,7 +33,7 @@ const ExperiencePage = () => {
         </div>
         <div className="timeline">
 
-          {cvData.experiences.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <div className="timeline-item" key={index}>
               <div className="timeline-dot"></div>
               <div className="timeline-card">

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
 import { useTranslation } from 'react-i18next'
 
@@ -7,7 +6,6 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
   const { t, i18n } = useTranslation()
-  const location = useLocation()
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr')
@@ -16,29 +14,25 @@ const Header = () => {
   const closeMobileNav = () => setMobileMenuOpen(false)
 
   const navLinks = [
-    { to: '/about', label: t('nav.about') },
-    { to: '/skills', label: t('nav.skills') },
-    { to: '/experience', label: t('nav.experience') },
-    { to: '/projects', label: t('nav.projects') },
-    { to: '/services', label: t('nav.services') },
-    { to: '/contact', label: t('nav.contact') },
-    { to: '/cv', label: t('nav.cv') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#experience', label: t('nav.experience') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#contact', label: t('nav.contact') },
+    { href: '#cv', label: t('nav.cv') },
   ]
 
   return (
     <>
       <header role="banner">
-        <Link to="/" className="logo">FM<span>.</span></Link>
+        <a href="#home" className="logo">FM<span>.</span></a>
 
         <nav className="nav-links" aria-label="Navigation principale">
           {navLinks.map(link => (
-            <Link 
-              key={link.to} 
-              to={link.to}
-              className={location.pathname === link.to ? 'active' : ''}
-            >
+            <a key={link.href} href={link.href}>
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -53,9 +47,9 @@ const Header = () => {
           <button className="icon-btn" onClick={toggleLanguage} aria-label="Switch language">
             {i18n.language === 'fr' ? 'FR' : 'EN'}
           </button>
-          <Link to="/contact" className="btn-hire">{t('nav.hire')}</Link>
-          <button 
-            className="icon-btn hamburger" 
+          <a href="#contact" className="btn-hire">{t('nav.hire')}</a>
+          <button
+            className="icon-btn hamburger"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu"
           >
@@ -66,13 +60,9 @@ const Header = () => {
 
       <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`} aria-label="Menu mobile">
         {navLinks.map(link => (
-          <Link 
-            key={link.to} 
-            to={link.to} 
-            onClick={closeMobileNav}
-          >
+          <a key={link.href} href={link.href} onClick={closeMobileNav}>
             {link.label}
-          </Link>
+          </a>
         ))}
         <div className="available-badge" style={{ justifyContent: 'center', marginTop: '8px' }}>
           <div className="available-dot"></div>

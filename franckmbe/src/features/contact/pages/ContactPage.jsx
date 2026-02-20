@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import cvData from '../../../data/cv.json'
 
 const ContactPage = () => {
   const { t } = useTranslation()
@@ -16,95 +17,92 @@ const ContactPage = () => {
     }, 1500)
   }
 
+  const contactItems = cvData.contact.items || []
+
   return (
     <section id="contact">
       <div className="container">
         <div className="contact-grid">
           <div className="reveal">
-            <div className="section-label">{t('contact.label')}</div>
-            <h2 className="section-title">{t('contact.title')}<br/><span className="gradient-text">{t('contact.titleGradient')}</span></h2>
-            <p className="section-desc" style={{marginBottom:'32px'}}>{t('contact.description')}</p>
+            <div className="section-label">Contact</div>
+            <h2 className="section-title">Travaillons<br/><span className="gradient-text">ensemble</span></h2>
+            <p className="section-desc" style={{marginBottom:'32px'}}>Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data.</p>
 
             <div className="contact-info">
-              <a href="mailto:drssfranck@gmail.com" className="contact-item">
-                <div className="contact-icon">✉️</div>
-                <div>
-                  <div className="contact-label">EMAIL</div>
-                  <div className="contact-value">drssfranck@gmail.com</div>
-                </div>
-              </a>
-              <a href="tel:+33643746840" className="contact-item">
-                <div className="contact-icon">📱</div>
-                <div>
-                  <div className="contact-label">TÉLÉPHONE</div>
-                  <div className="contact-value">+33 6 43 74 68 40</div>
-                </div>
-              </a>
-              <a href="https://linkedin.com/in/imbe" target="_blank" className="contact-item" rel="noopener">
-                <div className="contact-icon">💼</div>
-                <div>
-                  <div className="contact-label">LINKEDIN</div>
-                  <div className="contact-value">linkedin.com/in/imbe</div>
-                </div>
-              </a>
-              <div className="contact-item">
-                <div className="contact-icon">📍</div>
-                <div>
-                  <div className="contact-label">LOCALISATION</div>
-                  <div className="contact-value">Paris, Île-de-France — &lt;50 km</div>
-                </div>
-              </div>
+              {contactItems.map((item, index) => {
+                if (item.type === 'email' || item.type === 'tel' || item.type === 'link') {
+                  return (
+                    <a href={item.link} className="contact-item" key={index} target={item.type === 'link' ? '_blank' : undefined} rel={item.type === 'link' ? 'noopener' : undefined}>
+                      <div className="contact-icon">{item.icon}</div>
+                      <div>
+                        <div className="contact-label">{item.label}</div>
+                        <div className="contact-value">{item.value}</div>
+                      </div>
+                    </a>
+                  )
+                } else {
+                  return (
+                    <div className="contact-item" key={index}>
+                      <div className="contact-icon">{item.icon}</div>
+                      <div>
+                        <div className="contact-label">{item.label}</div>
+                        <div className="contact-value">{item.value}</div>
+                      </div>
+                    </div>
+                  )
+                }
+              })}
             </div>
 
             <div className="cdi-banner" style={{marginTop:'24px'}}>
               <h4>🔍 {t('available.full')}</h4>
-              <p>{t('contact.cdiMessage')}</p>
+              <p>{cvData.contact.cdiMessage}</p>
             </div>
           </div>
 
           <div className="reveal reveal-delay-2">
             <div className="contact-form">
-              <h3 style={{fontFamily:'var(--font-display)', fontWeight:'700', letterSpacing:'-0.03em', marginBottom:'24px'}}>{t('contact.formTitle')}</h3>
+              <h3 style={{fontFamily:'var(--font-display)', fontWeight:'700', letterSpacing:'-0.03em', marginBottom:'24px'}}>Envoyer un message</h3>
               {!formSubmitted ? (
                 <form id="contact-form" onSubmit={handleSubmit} noValidate>
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="firstname">{t('contact.firstName')}</label>
-                      <input type="text" id="firstname" placeholder={t('contact.firstNamePlaceholder')} required />
+                      <label htmlFor="firstname">Prénom</label>
+                      <input type="text" id="firstname" placeholder="Jean" required />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="lastname">{t('contact.lastName')}</label>
-                      <input type="text" id="lastname" placeholder={t('contact.lastNamePlaceholder')} required />
+                      <label htmlFor="lastname">Nom</label>
+                      <input type="text" id="lastname" placeholder="Dupont" required />
                     </div>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email-contact">{t('contact.email')}</label>
-                    <input type="email" id="email-contact" placeholder={t('contact.emailPlaceholder')} required />
+                    <label htmlFor="email-contact">Email professionnel</label>
+                    <input type="email" id="email-contact" placeholder="jean.dupont@entreprise.com" required />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="company">{t('contact.company')}</label>
-                    <input type="text" id="company" placeholder={t('contact.companyPlaceholder')} />
+                    <label htmlFor="company">Entreprise</label>
+                    <input type="text" id="company" placeholder="Nom de votre entreprise" />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="subject">{t('contact.subject')}</label>
+                    <label htmlFor="subject">Objet</label>
                     <select id="subject">
-                      <option value="">{t('contact.subjectPlaceholder')}</option>
-                      <option value="cdi">{t('contact.subjectCDI')}</option>
-                      <option value="cdi-de">{t('contact.subjectCDIDE')}</option>
-                      <option value="freelance">{t('contact.subjectFreelance')}</option>
-                      <option value="collab">{t('contact.subjectCollab')}</option>
-                      <option value="other">{t('contact.subjectOther')}</option>
+                      <option value="">Sélectionnez un objet...</option>
+                      <option value="cdi">Proposition CDI Data Analyst</option>
+                      <option value="cdi-de">Proposition CDI Data Engineer</option>
+                      <option value="freelance">Mission Freelance / Consulting</option>
+                      <option value="collab">Collaboration / Partenariat</option>
+                      <option value="other">Autre</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="message">{t('contact.message')}</label>
-                    <textarea id="message" placeholder={t('contact.messagePlaceholder')} required></textarea>
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" placeholder="Décrivez votre opportunité ou votre projet data..." required></textarea>
                   </div>
-                  <button type="submit" className="form-submit">✉ {t('contact.send')}</button>
+                  <button type="submit" className="form-submit">✉ Envoyer le message</button>
                 </form>
               ) : (
                 <div className="form-success" style={{display:'block'}}>
-                  ✅ {t('contact.success')}
+                  ✅ Message envoyé ! Je vous répondrai dans les 24h.
                 </div>
               )}
             </div>

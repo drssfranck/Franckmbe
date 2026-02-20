@@ -23,6 +23,38 @@
     "contact": "✉ Me contacter",
     "linkedin": "LinkedIn →"
   },
+  "about": {
+    "label": "À propos",
+    "title": "Data Analyst",
+    "titleGradient": "passionné & engagé"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Travaillons",
+    "titleGradient": "ensemble",
+    "description": "Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data.",
+    "formTitle": "Envoyer un message",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Jean",
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Dupont",
+    "email": "Email professionnel",
+    "emailPlaceholder": "jean.dupont@entreprise.com",
+    "company": "Entreprise",
+    "companyPlaceholder": "Nom de votre entreprise",
+    "subject": "Objet",
+    "subjectPlaceholder": "Sélectionnez un objet...",
+    "subjectCDI": "Proposition CDI Data Analyst",
+    "subjectCDIDE": "Proposition CDI Data Engineer",
+    "subjectFreelance": "Mission Freelance / Consulting",
+    "subjectCollab": "Collaboration / Partenariat",
+    "subjectOther": "Autre",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre opportunité ou votre projet data...",
+    "send": "Envoyer le message",
+    "success": "Message envoyé ! Je vous répondrai dans les 24h.",
+    "cdiMessage": "Je suis activement en recherche d'un CDI Data Analyst ou Data Engineer à Paris. Mon alternance chez ENI France se termine en Septembre 2026. N'hésitez pas à me contacter pour discuter."
+  },
   "footer": {
     "description": "Data Analyst & Data Engineer passionné par la transformation des données en décisions stratégiques. Disponible CDI Septembre 2026.",
     "navigation": "Navigation",

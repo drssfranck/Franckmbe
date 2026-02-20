@@ -1,50 +1,45 @@
-import { useTranslation } from 'react-i18next'
+import cvData from '../../../data/cv.json'
 
 const AboutPage = () => {
-  const { t } = useTranslation()
-
   return (
     <section id="about">
       <div className="container">
         <div className="about-grid">
           <div className="about-text reveal">
-            <div className="section-label">{t('about.label')}</div>
-            <h2 className="section-title">{t('about.title')}<br/><span className="gradient-text">{t('about.titleGradient')}</span></h2>
-            <p>{t('about.paragraph1')}</p>
-            <p>{t('about.paragraph2')}</p>
-            <div className="about-highlight">
-              <p>{t('about.highlight')}</p>
-            </div>
-            <p>{t('about.paragraph3')}</p>
+            <div className="section-label">À propos</div>
+            <h2 className="section-title">Data Analyst<br/><span className="gradient-text">passionné & engagé</span></h2>
+            {cvData.about.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+            <div className="about-highlight" dangerouslySetInnerHTML={{ __html: cvData.about.highlight }} />
           </div>
           <div className="reveal reveal-delay-2">
             <div className="about-cdi-card">
               <div className="cdi-header">
                 <div className="cdi-icon">✅</div>
                 <div>
-                  <div className="cdi-title">{t('about.cdiTitle')}</div>
-                  <div style={{fontSize:'0.75rem', color:'var(--text-muted)'}}>{t('about.cdiSubtitle')}</div>
+                  <div className="cdi-title">{cvData.about.cdi.title}</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--text-muted)'}}>{cvData.about.cdi.subtitle}</div>
                 </div>
               </div>
               <div className="cdi-list">
-                <div className="cdi-item"><div className="cdi-dot"></div>{t('about.cdiItem1')}</div>
-                <div className="cdi-item"><div className="cdi-dot"></div>{t('about.cdiItem2')}</div>
-                <div className="cdi-item"><div className="cdi-dot"></div>{t('about.cdiItem3')}</div>
-                <div className="cdi-item"><div className="cdi-dot"></div>{t('about.cdiItem4')}</div>
-                <div className="cdi-item"><div className="cdi-dot"></div>{t('about.cdiItem5')}</div>
+                {cvData.about.cdi.items.map((item, index) => (
+                  <div className="cdi-item" key={index}>
+                    <div className="cdi-dot"></div>
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="lang-card">
-              <h4>{t('about.languages')}</h4>
+              <h4>Langues</h4>
               <div className="lang-items">
-                <div className="lang-item">
-                  <span className="lang-name">🇫🇷 Français</span>
-                  <span className="lang-level">Natif (C2)</span>
-                </div>
-                <div className="lang-item">
-                  <span className="lang-name">🇬🇧 Anglais</span>
-                  <span className="lang-level">Intermédiaire B1-B2</span>
-                </div>
+                {cvData.languages.map((lang, index) => (
+                  <div className="lang-item" key={index}>
+                    <span className="lang-name">{lang.name}</span>
+                    <span className="lang-level">{lang.level}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

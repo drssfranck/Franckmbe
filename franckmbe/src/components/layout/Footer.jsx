@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
@@ -16,12 +15,12 @@ const Footer = () => {
           <div className="footer-links">
             <h4>{t('footer.navigation')}</h4>
             <ul>
-              <li><Link to="/">{t('nav.home')}</Link></li>
-              <li><Link to="/about">{t('nav.about')}</Link></li>
-              <li><Link to="/skills">{t('nav.skills')}</Link></li>
-              <li><Link to="/experience">{t('nav.experience')}</Link></li>
-              <li><Link to="/projects">{t('nav.projects')}</Link></li>
-              <li><Link to="/cv">{t('nav.cv')}</Link></li>
+              <li><a href="#home">{t('nav.home')}</a></li>
+              <li><a href="#about">{t('nav.about')}</a></li>
+              <li><a href="#skills">{t('nav.skills')}</a></li>
+              <li><a href="#experience">{t('nav.experience')}</a></li>
+              <li><a href="#projects">{t('nav.projects')}</a></li>
+              <li><a href="#cv">{t('nav.cv')}</a></li>
             </ul>
           </div>
 
@@ -31,16 +30,16 @@ const Footer = () => {
               <li><a href="mailto:drssfranck@gmail.com">drssfranck@gmail.com</a></li>
               <li><a href="tel:+33643746840">+33 6 43 74 68 40</a></li>
               <li><a href="https://linkedin.com/in/imbe" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><Link to="/contact">{t('footer.contactForm')}</Link></li>
+              <li><a href="#contact">{t('footer.contactForm')}</a></li>
             </ul>
           </div>
 
           <div className="footer-links">
             <h4>{t('footer.recruiters')}</h4>
             <ul>
-              <li><Link to="/cv">{t('footer.downloadCV')}</Link></li>
-              <li><Link to="/contact">{t('footer.offer')}</Link></li>
-              <li><Link to="/services">{t('footer.consulting')}</Link></li>
+              <li><a href="#cv">{t('footer.downloadCV')}</a></li>
+              <li><a href="#contact">{t('footer.offer')}</a></li>
+              <li><a href="#services">{t('footer.consulting')}</a></li>
             </ul>
           </div>
         </div>
