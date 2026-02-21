@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import ProjectCard from '../components/ProjectCard'
 import projects from '../../../data/projects.json'
 
 const ProjectsPage = () => {
+  const { t } = useTranslation()
   const [filter, setFilter] = useState('all')
 
   const filters = [
-    { value: 'all', label: 'Tous les projets' },
-    { value: 'dashboard', label: 'Dashboard' },
-    { value: 'etl', label: 'Data Engineering / ETL' },
-    { value: 'data-viz', label: 'Data Visualisation' }
+    { value: 'all', label: t('projects.filterAll') },
+    { value: 'dashboard', label: t('projects.filterDashboard') },
+    { value: 'etl', label: t('projects.filterETL') },
+    { value: 'data-viz', label: t('projects.filterViz') }
   ]
 
   const filteredProjects = filter === 'all'
@@ -20,9 +22,9 @@ const ProjectsPage = () => {
     <section id="projects">
       <div className="container">
         <div className="reveal" style={{marginBottom: '40px'}}>
-          <div className="section-label">Portfolio</div>
-          <h2 className="section-title">Projets<br/><span className="gradient-text">Data & Analytics</span></h2>
-          <p className="section-desc">Sélection de projets représentatifs couvrant la BI, l'ETL et la Data Visualisation.</p>
+          <div className="section-label">{t('projects.sectionLabel')}</div>
+          <h2 className="section-title">{t('projects.title')}<br/><span className="gradient-text">{t('projects.titleGradient')}</span></h2>
+          <p className="section-desc">{t('projects.description')}</p>
         </div>
 
         <div className="projects-filters reveal">

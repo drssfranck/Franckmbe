@@ -24,9 +24,25 @@
     "linkedin": "LinkedIn →"
   },
   "about": {
-    "label": "À propos",
+    "sectionLabel": "À propos",
     "title": "Data Analyst",
-    "titleGradient": "passionné & engagé"
+    "titleGradient": "passionné & engagé",
+    "languagesSection": "Langues",
+    "paragraphs": [
+      "Fort d'une formation MBA Big Data & IA à MBA ESG et d'une expérience terrain en alternance chez ENI France, je combine rigueur analytique et sens des affaires pour délivrer des insights actionnables.",
+      "Mon parcours couvre l'ensemble de la chaîne de valeur data : de la collecte et la transformation (pipelines ETL, Azure Data Lake) jusqu'à la visualisation et la présentation métier (Power BI, Tableau, Streamlit).",
+      "Bilingue français / anglais B1-B2, je suis à l'aise aussi bien dans des environnements techniques qu'en présentation d'insights à des parties prenantes non-techniques."
+    ],
+    "highlight": "🎯 Mon objectif : rejoindre une équipe Data dans le cadre d'un CDI à Paris (ou full-remote) à partir de Septembre 2026, pour contribuer à des projets data impactants à fort enjeu business.",
+    "cdiTitle": "Recherche CDI — Septembre 2026",
+    "cdiSubtitle": "Profil disponible dès fin d'alternance",
+    "cdiItems": [
+      "Data Analyst / BI Analyst",
+      "Data Engineer / Analytics Engineer",
+      "Paris Île-de-France (<50km)",
+      "Télétravail partiel ou total OK",
+      "Secteur : tous secteurs (Énergie, Finance, Tech, E-commerce…)"
+    ]
   },
   "contact": {
     "label": "Contact",
@@ -66,5 +82,55 @@
     "downloadCV": "Télécharger CV PDF",
     "offer": "Proposer une offre CDI",
     "consulting": "Services Consulting"
+  },
+  "skills": {
+    "sectionLabel": "Compétences",
+    "title": "Stack Technique",
+    "description": "Maîtrise de l'ensemble de la chaîne data, de l'ingestion jusqu'à la visualisation."
+  },
+  "experience": {
+    "sectionLabel": "Parcours",
+    "title": "Expériences",
+    "titleGradient": "Professionnelles"
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "title": "Projets",
+    "titleGradient": "Data & Analytics",
+    "description": "Sélection de projets représentatifs couvrant la BI, l'ETL et la Data Visualisation.",
+    "filterAll": "Tous les projets",
+    "filterDashboard": "Dashboard",
+    "filterETL": "Data Engineering / ETL",
+    "filterViz": "Data Visualisation"
+  },
+  "education": {
+    "sectionLabel": "Formation",
+    "title": "Parcours",
+    "titleGradient": "Académique"
+  },
+  "services": {
+    "sectionLabel": "Consulting & Services",
+    "title": "Ce que je",
+    "titleGradient": "peux apporter",
+    "description": "En complément d'un CDI, je propose des services de consulting data aux PME et startups."
+  },
+  "cv": {
+    "sectionLabel": "Mon CV",
+    "title": "Curriculum",
+    "titleGradient": "Vitae",
+    "profileSection": "Profil",
+    "experienceSection": "Expériences",
+    "educationSection": "Formation",
+    "skillsSection": "Compétences",
+    "languagesSection": "Langues",
+    "downloadPdfTitle": "Télécharger le CV PDF",
+    "downloadPdfDesc": "Version PDF optimisée ATS, prête à l'emploi pour les recruteurs et systèmes de suivi des candidatures.",
+    "downloadPdfBtn": "↓ Télécharger PDF",
+    "printTitle": "Imprimer le CV",
+    "printDesc": "Version imprimable directement depuis votre navigateur en format A4.",
+    "printBtn": "🖨 Imprimer",
+    "linkedinTitle": "Profil LinkedIn",
+    "linkedinDesc": "Consultez mon profil LinkedIn complet avec recommandations et historique détaillé.",
+    "linkedinBtn": "→ Voir LinkedIn"
   }
 }

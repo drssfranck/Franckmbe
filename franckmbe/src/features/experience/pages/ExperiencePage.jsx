@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const ExperiencePage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,8 +31,8 @@ const ExperiencePage = () => {
     <section id="experience">
       <div className="container">
         <div className="reveal" style={{marginBottom:'56px'}}>
-          <div className="section-label">Parcours</div>
-          <h2 className="section-title">Expériences<br/><span className="gradient-text">Professionnelles</span></h2>
+          <div className="section-label">{t('experience.sectionLabel')}</div>
+          <h2 className="section-title">{t('experience.title')}<br/><span className="gradient-text">{t('experience.titleGradient')}</span></h2>
         </div>
         <div className="timeline">
 

@@ -24,9 +24,25 @@
     "linkedin": "LinkedIn →"
   },
   "about": {
-    "label": "About",
+    "sectionLabel": "About",
     "title": "Data Analyst",
-    "titleGradient": "passionate & committed"
+    "titleGradient": "passionate & committed",
+    "languagesSection": "Languages",
+    "paragraphs": [
+      "With an MBA in Big Data & AI from MBA ESG and hands-on experience as an apprentice at ENI France, I combine analytical rigor with business acumen to deliver actionable insights.",
+      "My career spans the entire data value chain: from collection and transformation (ETL pipelines, Azure Data Lake) to visualization and business presentation (Power BI, Tableau, Streamlit).",
+      "Bilingual French / English B1-B2, I'm comfortable both in technical environments and presenting insights to non-technical stakeholders."
+    ],
+    "highlight": "🎯 My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
+    "cdiTitle": "Seeking Permanent Role — September 2026",
+    "cdiSubtitle": "Profile available at end of apprenticeship",
+    "cdiItems": [
+      "Data Analyst / BI Analyst",
+      "Data Engineer / Analytics Engineer",
+      "Paris Île-de-France (<50km)",
+      "Partial or full remote OK",
+      "Sector: All sectors (Energy, Finance, Tech, E-commerce…)"
+    ]
   },
   "contact": {
     "label": "Contact",
@@ -66,5 +82,55 @@
     "downloadCV": "Download PDF resume",
     "offer": "Submit job offer",
     "consulting": "Consulting Services"
+  },
+  "skills": {
+    "sectionLabel": "Skills",
+    "title": "Technical Stack",
+    "description": "Expertise across the entire data pipeline, from ingestion to visualization."
+  },
+  "experience": {
+    "sectionLabel": "Journey",
+    "title": "Professional",
+    "titleGradient": "Experience"
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "title": "Data & Analytics",
+    "titleGradient": "Projects",
+    "description": "Selection of representative projects covering BI, ETL and Data Visualization.",
+    "filterAll": "All projects",
+    "filterDashboard": "Dashboard",
+    "filterETL": "Data Engineering / ETL",
+    "filterViz": "Data Visualization"
+  },
+  "education": {
+    "sectionLabel": "Education",
+    "title": "Academic",
+    "titleGradient": "Journey"
+  },
+  "services": {
+    "sectionLabel": "Consulting & Services",
+    "title": "What I can",
+    "titleGradient": "bring to you",
+    "description": "In conjunction with a permanent role, I offer data consulting services to SMEs and startups."
+  },
+  "cv": {
+    "sectionLabel": "My Resume",
+    "title": "Curriculum",
+    "titleGradient": "Vitae",
+    "profileSection": "Profile",
+    "experienceSection": "Experiences",
+    "educationSection": "Education",
+    "skillsSection": "Skills",
+    "languagesSection": "Languages",
+    "downloadPdfTitle": "Download PDF Resume",
+    "downloadPdfDesc": "ATS-optimized PDF version, ready to use for recruiters and applicant tracking systems.",
+    "downloadPdfBtn": "↓ Download PDF",
+    "printTitle": "Print Resume",
+    "printDesc": "Printable version directly from your browser in A4 format.",
+    "printBtn": "🖨 Print",
+    "linkedinTitle": "LinkedIn Profile",
+    "linkedinDesc": "View my complete LinkedIn profile with recommendations and detailed history.",
+    "linkedinBtn": "→ View LinkedIn"
   }
 }

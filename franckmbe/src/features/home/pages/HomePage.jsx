@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import cvData from '../../../data/cv.json'
+import profileImage from '../../../assets/images/profile.jpg'
+import { useCVData } from '../../../hooks/useCVData'
 
 const HomePage = () => {
   const { t } = useTranslation()
+  const cvData = useCVData()
 
   useEffect(() => {
     const heroContent = document.querySelector('.hero-content')
@@ -64,7 +66,7 @@ const HomePage = () => {
           {/* RIGHT: Profile Card */}
           <div>
             <div className="hero-card">
-              <div className="hero-avatar">FM</div>
+              <img src={profileImage} alt={cvData.name} className="hero-avatar-image" />
               <div className="hero-card-name">{cvData.name}</div>
               <div className="hero-card-title">{cvData.title}</div>
               <div className="hero-card-info">

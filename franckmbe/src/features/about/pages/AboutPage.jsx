@@ -1,17 +1,20 @@
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const AboutPage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   return (
     <section id="about">
       <div className="container">
         <div className="about-grid">
           <div className="about-text reveal">
-            <div className="section-label">À propos</div>
-            <h2 className="section-title">Data Analyst<br/><span className="gradient-text">passionné & engagé</span></h2>
+            <div className="section-label">{t('about.sectionLabel')}</div>
+            <h2 className="section-title">{t('about.title')}<br/><span className="gradient-text">{t('about.titleGradient')}</span></h2>
             {cvData.about.paragraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
-            <div className="about-highlight" dangerouslySetInnerHTML={{ __html: cvData.about.highlight }} />
+            <div className="about-highlight">🎯 {cvData.about.highlight}</div>
           </div>
           <div className="reveal reveal-delay-2">
             <div className="about-cdi-card">
@@ -32,7 +35,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="lang-card">
-              <h4>Langues</h4>
+              <h4>{t('about.languagesSection', 'Langues')}</h4>
               <div className="lang-items">
                 {cvData.languages.map((lang, index) => (
                   <div className="lang-item" key={index}>

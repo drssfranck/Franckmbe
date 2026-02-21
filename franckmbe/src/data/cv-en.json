@@ -1,0 +1,190 @@
+{
+  "name": "Franck MBE",
+  "title": "Data Analyst · Data Engineer",
+  "location": "Paris <50km",
+  "email": "drssfranck@gmail.com",
+  "phone": "+33 6 43 74 68 40",
+  "linkedin": "linkedin.com/in/imbe",
+  "availability": "Permanent Role September 2026",
+  "profile": "Passionate Data Analyst with expertise in Big Data, BI and Data Engineering. Specialized in data-driven solutions, Azure cloud and visualization. Currently interning at ENI France, seeking a permanent role from September 2026.",
+  "hero": {
+    "stats": [
+      { "value": "5+", "label": "Years XP" },
+      { "value": "4+", "label": "Data Projects" },
+      { "value": "MBA", "label": "Big Data & AI" },
+      { "value": "Paris", "label": "< 50 km" }
+    ],
+    "techStack": ["Python", "SQL", "Power BI", "Azure", "Snowflake", "Tableau", "DAX", "ETL"],
+    "cardInfo": [
+      { "icon": "📍", "text": "Paris, Île-de-France (<50km)" },
+      { "icon": "✉️", "text": "drssfranck@gmail.com" },
+      { "icon": "📱", "text": "+33 6 43 74 68 40" },
+      { "icon": "🎓", "text": "MBA Big Data & AI — MBA ESG (2027)" },
+      { "icon": "💼", "text": "Intern at ENI France (2025–2026)" }
+    ]
+  },
+  "about": {
+    "paragraphs": [
+      "With an MBA in Big Data & AI from MBA ESG and hands-on experience as an intern at ENI France, I combine analytical rigor with business acumen to deliver actionable insights.",
+      "My career spans the entire data value chain: from collection and transformation (ETL pipelines, Azure Data Lake) to visualization and business presentation (Power BI, Tableau, Streamlit).",
+      "Bilingual French / English B1-B2, I'm comfortable both in technical environments and presenting insights to non-technical stakeholders."
+    ],
+    "highlight": "🎯 My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
+    "cdi": {
+      "title": "Seeking Permanent Role — September 2026",
+      "subtitle": "Profile available at end of internship",
+      "items": [
+        "Data Analyst / BI Analyst",
+        "Data Engineer / Analytics Engineer",
+        "Paris Île-de-France (<50km)",
+        "Partial or full remote OK",
+        "Sector: All sectors (Energy, Finance, Tech, E-commerce…)"
+      ]
+    }
+  },
+  "languages": [
+    { "name": "French", "level": "Native" },
+    { "name": "English", "level": "B1-B2" }
+  ],
+  "experiences": [
+    {
+      "title": "Data Analyst / Data Engineer",
+      "company": "ENI France",
+      "period": "Sept. 2025 – Sept. 2026",
+      "type": "Internship · In progress",
+      "description": "Azure, Fabric, ETL, Power BI",
+      "tasks": [
+        "Design and maintenance of ETL pipelines on Azure",
+        "Development of business dashboards on Microsoft Fabric",
+        "Data Lake architecture (Bronze / Silver / Gold)",
+        "Analysis and reporting of energy data"
+      ],
+      "tags": ["Azure Data Lake", "Microsoft Fabric", "Power BI", "Python", "ETL"]
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Kasaltech",
+      "period": "2025",
+      "type": "Data Analyst Mission",
+      "description": "Python, Streamlit, MySQL",
+      "tasks": [
+        "Development of an analytical dashboard with Streamlit + MySQL",
+        "Python scripts for data analysis and cleaning",
+        "Presentation of product insights to decision-making teams"
+      ],
+      "tags": ["Python", "Streamlit", "MySQL", "Data Viz"]
+    },
+    {
+      "title": "Data Engineer",
+      "company": "MBA ESG · Advanced Academic Project",
+      "period": "2025 – MBA Project",
+      "type": "Data Engineering",
+      "description": "Azure, ETL, Medallion Architecture, Fabric",
+      "tasks": [
+        "Construction of end-to-end ETL pipelines",
+        "Azure Data Lake integration for storage and transformation",
+        "Implementation of Medallion architecture (Bronze/Silver/Gold)",
+        "Reporting dashboards via Microsoft Fabric"
+      ],
+      "tags": ["Azure", "ETL", "Medallion Architecture", "Fabric"]
+    },
+    {
+      "title": "Business Analyst",
+      "company": "Fast And Sure Travel",
+      "period": "2021 – 2025",
+      "type": "Business Analyst",
+      "description": "Power BI, CRM/ERP, KPI Reporting",
+      "tasks": [
+        "Analysis of CRM, ERP and business logs for insight extraction",
+        "Creation of KPI dashboards for performance tracking",
+        "Workshop facilitation with business teams",
+        "Training and support of teams on data tools"
+      ],
+      "tags": ["CRM Analysis", "KPI Dashboards", "Excel", "Power BI"]
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "name": "Programming Languages",
+        "icon": "💻",
+        "color": "rgba(59, 130, 246, 0.1)",
+        "items": [
+          { "name": "Python", "proficiency": 90 },
+          { "name": "SQL", "proficiency": 85 },
+          { "name": "JavaScript", "proficiency": 60 }
+        ]
+      },
+      {
+        "name": "BI & Visualization",
+        "icon": "📊",
+        "color": "rgba(34, 197, 94, 0.1)",
+        "items": [
+          { "name": "Power BI", "proficiency": 90 },
+          { "name": "Tableau", "proficiency": 80 },
+          { "name": "Streamlit", "proficiency": 85 }
+        ]
+      },
+      {
+        "name": "Cloud & Data Engineering",
+        "icon": "☁️",
+        "color": "rgba(168, 85, 247, 0.1)",
+        "items": [
+          { "name": "Azure", "proficiency": 85 },
+          { "name": "Snowflake", "proficiency": 80 },
+          { "name": "dbt", "proficiency": 75 }
+        ]
+      },
+      {
+        "name": "Data & Tools",
+        "icon": "🛠️",
+        "color": "rgba(249, 115, 22, 0.1)",
+        "items": [
+          { "name": "ETL", "proficiency": 90 },
+          { "name": "DAX", "proficiency": 80 },
+          { "name": "Git", "proficiency": 85 }
+        ]
+      }
+    ]
+  },
+  "education": [
+    {
+      "year": "2024-2027",
+      "degree": "MBA Big Data & Artificial Intelligence",
+      "school": "MBA ESG (Paris)",
+      "status": "In progress"
+    },
+    {
+      "year": "2017-2021",
+      "degree": "Bachelor's Degree in Computer Science",
+      "school": "University of Yaoundé (Cameroon)",
+      "status": null
+    }
+  ],
+  "services": [
+    {
+      "icon": "📊",
+      "title": "BI Consulting",
+      "description": "Strategic advice and implementation of BI solutions tailored to your business needs.",
+      "color": "rgba(59, 130, 246, 0.1)"
+    },
+    {
+      "icon": "🔧",
+      "title": "ETL Development",
+      "description": "Design and development of robust ETL pipelines for your data infrastructure.",
+      "color": "rgba(34, 197, 94, 0.1)"
+    },
+    {
+      "icon": "🧠",
+      "title": "Data Strategy",
+      "description": "Guidance in data strategy and implementation of data-driven approaches.",
+      "color": "rgba(168, 85, 247, 0.1)"
+    },
+    {
+      "icon": "📈",
+      "title": "Dashboard Development",
+      "description": "Creation of interactive dashboards for real-time monitoring and decision-making.",
+      "color": "rgba(249, 115, 22, 0.1)"
+    }
+  ]
+}

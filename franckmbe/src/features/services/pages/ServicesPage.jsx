@@ -1,15 +1,18 @@
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const ServicesPage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   const services = cvData.services || []
 
   return (
     <section id="services">
       <div className="container">
         <div className="reveal" style={{marginBottom:'56px'}}>
-          <div className="section-label">Consulting & Services</div>
-          <h2 className="section-title">Ce que je<br/><span className="gradient-text">peux apporter</span></h2>
-          <p className="section-desc">En complément d'un CDI, je propose des services de consulting data aux PME et startups.</p>
+          <div className="section-label">{t('services.sectionLabel')}</div>
+          <h2 className="section-title">{t('services.title')}<br/><span className="gradient-text">{t('services.titleGradient')}</span></h2>
+          <p className="section-desc">{t('services.description')}</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (

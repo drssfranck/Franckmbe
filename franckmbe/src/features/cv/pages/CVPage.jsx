@@ -1,6 +1,9 @@
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const CVPage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   // Extraire toutes les compétences de la structure categories
   const allSkills = []
 
@@ -17,8 +20,8 @@ const CVPage = () => {
     <section id="cv" style={{background: 'var(--bg2)'}}>
       <div className="container">
         <div className="reveal" style={{marginBottom:'56px'}}>
-          <div className="section-label">Mon CV</div>
-          <h2 className="section-title">Curriculum<br/><span className="gradient-text">Vitae</span></h2>
+          <div className="section-label">{t('cv.sectionLabel')}</div>
+          <h2 className="section-title">{t('cv.title')}<br/><span className="gradient-text">{t('cv.titleGradient')}</span></h2>
         </div>
         <div className="cv-container">
           {/* CV Preview */}
@@ -35,10 +38,10 @@ const CVPage = () => {
                 </div>
               </div>
               <div className="cv-preview-body">
-                <div className="cv-section-title">Profil</div>
+                <div className="cv-section-title">{t('cv.profileSection')}</div>
                 <p style={{fontSize:'0.8rem', color:'#374151', lineHeight:'1.6'}}>{cvData.profile}</p>
 
-                <div className="cv-section-title">Expériences</div>
+                <div className="cv-section-title">{t('cv.experienceSection')}</div>
                 {cvData.experiences && cvData.experiences.slice(0, 3).map((exp, i) => (
                   <div className="cv-entry" key={i}>
                     <div className="cv-entry-title">{exp.title} — {exp.company}</div>
@@ -46,14 +49,14 @@ const CVPage = () => {
                   </div>
                 ))}
 
-                <div className="cv-section-title">Compétences</div>
+                <div className="cv-section-title">{t('cv.skillsSection')}</div>
                 <div className="cv-skill-pills">
                   {allSkills.map((skill, i) => (
                     <span className="cv-pill" key={i}>{skill}</span>
                   ))}
                 </div>
 
-                <div className="cv-section-title">Formation</div>
+                <div className="cv-section-title">{t('cv.educationSection')}</div>
                 {cvData.education && cvData.education.slice(0, 2).map((edu, i) => (
                   <div className="cv-entry" key={i}>
                     <div className="cv-entry-title">{edu.degree}</div>
@@ -61,7 +64,7 @@ const CVPage = () => {
                   </div>
                 ))}
 
-                <div className="cv-section-title">Langues</div>
+                <div className="cv-section-title">{t('cv.languagesSection')}</div>
                 <div className="cv-skill-pills">
                   {cvData.languages && cvData.languages.map((lang, i) => (
                     <span className="cv-pill" key={i}>{lang.name} · {lang.level}</span>
@@ -75,23 +78,23 @@ const CVPage = () => {
           <div className="cv-actions reveal reveal-delay-2">
             <div className="cv-action-card">
               <div className="cv-action-icon">📄</div>
-              <div className="cv-action-title">Télécharger le CV PDF</div>
-              <div className="cv-action-desc">Version PDF optimisée ATS, prête à l'emploi pour les recruteurs et systèmes de suivi des candidatures.</div>
-              <a href="#" className="cv-dl-btn primary" onClick={(e) => { e.preventDefault(); window.print(); }}>↓ Télécharger PDF</a>
+              <div className="cv-action-title">{t('cv.downloadPdfTitle')}</div>
+              <div className="cv-action-desc">{t('cv.downloadPdfDesc')}</div>
+              <a href="#" className="cv-dl-btn primary" onClick={(e) => { e.preventDefault(); window.print(); }}>{t('cv.downloadPdfBtn')}</a>
             </div>
 
             <div className="cv-action-card">
               <div className="cv-action-icon">🖨️</div>
-              <div className="cv-action-title">Imprimer le CV</div>
-              <div className="cv-action-desc">Version imprimable directement depuis votre navigateur en format A4.</div>
-              <button className="cv-dl-btn secondary" onClick={() => window.print()}>🖨 Imprimer</button>
+              <div className="cv-action-title">{t('cv.printTitle')}</div>
+              <div className="cv-action-desc">{t('cv.printDesc')}</div>
+              <button className="cv-dl-btn secondary" onClick={() => window.print()}>{t('cv.printBtn')}</button>
             </div>
 
             <div className="cv-action-card">
               <div className="cv-action-icon">💼</div>
-              <div className="cv-action-title">Profil LinkedIn</div>
-              <div className="cv-action-desc">Consultez mon profil LinkedIn complet avec recommandations et historique détaillé.</div>
-              <a href="https://linkedin.com/in/imbe" target="_blank" className="cv-dl-btn secondary" rel="noopener">→ Voir LinkedIn</a>
+              <div className="cv-action-title">{t('cv.linkedinTitle')}</div>
+              <div className="cv-action-desc">{t('cv.linkedinDesc')}</div>
+              <a href="https://linkedin.com/in/imbe" target="_blank" className="cv-dl-btn secondary" rel="noopener">{t('cv.linkedinBtn')}</a>
             </div>
           </div>
         </div>

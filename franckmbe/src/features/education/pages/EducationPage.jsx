@@ -1,12 +1,15 @@
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const EducationPage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   return (
     <section id="education" style={{background: 'var(--bg2)'}}>
       <div className="container">
         <div className="reveal" style={{marginBottom:'48px'}}>
-          <div className="section-label">Formation</div>
-          <h2 className="section-title">Parcours<br/><span className="gradient-text">Académique</span></h2>
+          <div className="section-label">{t('education.sectionLabel')}</div>
+          <h2 className="section-title">{t('education.title')}<br/><span className="gradient-text">{t('education.titleGradient')}</span></h2>
         </div>
         <div className="edu-grid">
           {cvData.education.map((edu, index) => (

@@ -1,7 +1,10 @@
 import { useEffect, useRef } from 'react'
-import cvData from '../../../data/cv.json'
+import { useTranslation } from 'react-i18next'
+import { useCVData } from '../../../hooks/useCVData'
 
 const SkillsPage = () => {
+  const { t } = useTranslation()
+  const cvData = useCVData()
   const skillsRef = useRef(null)
 
   useEffect(() => {
@@ -37,9 +40,9 @@ const SkillsPage = () => {
       <div className="container">
         <div className="skills-header-row">
           <div className="reveal">
-            <div className="section-label">Compétences</div>
-            <h2 className="section-title">Stack Technique</h2>
-            <p className="section-desc">Maîtrise de l'ensemble de la chaîne data, de l'ingestion jusqu'à la visualisation.</p>
+            <div className="section-label">{t('skills.sectionLabel')}</div>
+            <h2 className="section-title">{t('skills.title')}</h2>
+            <p className="section-desc">{t('skills.description')}</p>
           </div>
         </div>
         <div className="skills-categories" ref={skillsRef}>
