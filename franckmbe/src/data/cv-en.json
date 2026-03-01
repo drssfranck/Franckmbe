@@ -1,12 +1,15 @@
 {
   "name": "Franck MBE",
-  "title": "Data Analyst · Data Engineer",
+  "title": "Junior Data Analyst",
   "location": "Paris (<50km)",
   "email": "drssfranck@gmail.com",
   "phone": "+33 6 43 74 68 40",
   "linkedin": "https://linkedin.com/in/imbe",
+  "github": "https://github.com/franckmbe",
+  "portfolio": "https://franckmbe-gnw9.vercel.app/",
   "availability": "Permanent Contract - September 2026",
-  "profile": "Business-oriented Data Analyst with strong expertise in Data Engineering, BI and Azure cloud environments. Specialized in designing ETL pipelines, data modeling (Star Schema) and reporting automation. Currently in apprenticeship at ENI France, I am looking for a permanent contract from September 2026.",
+
+  "profile": "Passionate about data analysis and business insights. Strong expertise in Data Engineering, BI and Azure cloud. Specialized in ETL pipeline design, data modeling and reporting automation. Looking for a permanent position from September 2026 to contribute to high-impact projects.",
 
   "hero": {
     "stats": [
@@ -27,9 +30,17 @@
     ]
   },
 
-  "about": {
-    "summary": "With an MBA in Big Data & AI and hands-on experience in apprenticeship at ENI France, I master the entire data value chain: ingestion, transformation, modeling, visualization and governance. I combine technical expertise with business understanding to deliver data solutions with high business impact.",
-    "objective": "Join a Data team on a permanent contract in Paris or full-remote from September 2026 to contribute to high-stakes strategic projects."
+  "skills": {
+    "technical": [
+      "Python", "SQL", "Power BI", "Tableau", "Advanced Excel", "ETL", "Azure", "Databricks", "Snowflake", "DAX", "Git", "Jupyter", "Streamlit"
+    ],
+    "soft": [
+      "Analytical thinking", "Problem solving", "Communication", "Curiosity", "Adaptability", "Autonomy", "Time management", "Pedagogy", "Team spirit"
+    ],
+    "languages": [
+      { "language": "French", "level": "C2 - Native" },
+      { "language": "English", "level": "B2 - Intermediate" }
+    ]
   },
 
   "experiences": [
@@ -174,9 +185,19 @@
     }
   ],
 
-  "languages": [
-    { "language": "French", "level": "C2 - Native" },
-    { "language": "English", "level": "B1-B2 - Intermediate" }
+  "projects": [
+    {
+      "title": "Power BI Recovery Dashboard",
+      "description": "Automated Power BI dashboard for recovery performance tracking, saving 2h/week for managers.",
+      "tools": ["Power BI", "SQL", "Excel"],
+      "impact": "Manual process replaced, real-time reporting."
+    },
+    {
+      "title": "Streamlit KPI App",
+      "description": "Created an interactive app to visualize product KPIs in real time.",
+      "tools": ["Python", "Streamlit", "MySQL"],
+      "impact": "Unified view of indicators for product teams."
+    }
   ],
 
   "career_goal": {
@@ -195,30 +216,24 @@
       "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
       "type": "credly",
       "issuer": "Microsoft",
-      "displayText": "Microsoft Certificate"
-    },
-    {
-      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
-      "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "Microsoft Certificate"
-    },
-    {
-      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
-      "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "Microsoft Certificate"
+      "displayText": "PL-300 Power BI Data Analyst Associate",
+      "verification_url": "https://www.credly.com/badges/ad489a08-96ec-41e5-8962-69b64739a4cd/public_url"
     },
     {
       "type": "microsoft-learn",
-      "title": "Microsoft Learn Certificate",
+      "title": "Microsoft Learn Certificate - Power BI",
       "issuer": "Microsoft",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
-      "credential_id": "FRANCKMBE-2082"
+      "credential_id": "FRANCKMBE-2082",
+      "verification_url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1"
     }
   ],
 
   "contact": {
-    "cdiMessage": "Recruiters, managers or freelance clients: I am available to discuss any permanent contract or data mission opportunities."
-  }
+    "cdiMessage": "Recruiters, managers or freelance clients: I am available to discuss any permanent contract or data mission opportunities.",
+    "portfolio": "https://franckmbe-gnw9.vercel.app/"
+  },
+  "interests": [
+    "Tech watch", "Hackathons", "Open Data", "Sports", "Travel"
+  ]
 }

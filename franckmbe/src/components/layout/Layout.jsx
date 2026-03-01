@@ -9,10 +9,8 @@ import SkillsPage from '../../features/skills/pages/SkillsPage'
 import ExperiencePage from '../../features/experience/pages/ExperiencePage'
 import ProjectsPage from '../../features/projects/pages/ProjectsPage'
 import ServicesPage from '../../features/services/pages/ServicesPage'
-import EducationPage from '../../features/education/pages/EducationPage'
 import CertificationsPage from '../../features/certifications/pages/CertificationsPage'
 import ContactPage from '../../features/contact/pages/ContactPage'
-import CVPage from '../../features/cv/pages/CVPage'
 
 const Layout = () => {
   // Gestion du défilement vers les ancres
@@ -114,13 +112,11 @@ const Layout = () => {
         <HomePage />
         <AboutPage />
         <SkillsPage />
+        <CertificationsPage />
         <ExperiencePage />
         <ProjectsPage />
         <ServicesPage />
-        <EducationPage />
-        <CertificationsPage />
         <ContactPage />
-        <CVPage />
       </main>
       <Footer />
       <button

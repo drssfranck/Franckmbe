@@ -1,13 +1,15 @@
 {
   "name": "Franck MBE",
-  "title": "Data Analyst · Data Engineer",
+  "title": "Data Analyst Junior",
   "location": "Paris (<50km)",
   "email": "drssfranck@gmail.com",
   "phone": "+33 6 43 74 68 40",
   "linkedin": "https://linkedin.com/in/imbe",
+  "github": "https://github.com/franckmbe",
+  "portfolio": "https://franckmbe-gnw9.vercel.app/",
   "availability": "CDI - Septembre 2026",
-  "profile": "Data Analyst orienté business avec une forte expertise en Data Engineering, BI et environnements cloud Azure. Spécialisé dans la conception de pipelines ETL, la modélisation de données (Star Schema) et l’automatisation de reporting. Actuellement en alternance chez ENI France, je recherche un CDI dès septembre 2026.",
 
+  "profile": "Passionné par l’analyse de données et la valorisation des insights business. Forte expertise en Data Engineering, BI et cloud Azure. Spécialisé dans la conception de pipelines ETL, la modélisation de données et l’automatisation de reporting. Je recherche un CDI dès septembre 2026 pour contribuer à des projets à fort enjeu stratégique.",
   "hero": {
     "stats": [
       { "value": "5+", "label": "Années XP" },
@@ -27,10 +29,6 @@
     ]
   },
 
-  "about": {
-    "summary": "Fort d'une formation MBA Big Data & IA et d'une expérience terrain en alternance chez ENI France, je maîtrise l’ensemble de la chaîne de valeur data : ingestion, transformation, modélisation, visualisation et gouvernance. Je combine expertise technique et compréhension métier pour délivrer des solutions data à fort impact business.",
-    "objective": "Rejoindre une équipe Data en CDI à Paris ou en full-remote à partir de septembre 2026 pour contribuer à des projets à fort enjeu stratégique."
-  },
 
   "experiences": [
     {
@@ -174,9 +172,19 @@
     }
   ],
 
-  "languages": [
-    { "language": "Français", "level": "C2 - Natif" },
-    { "language": "Anglais", "level": "B1-B2 - Intermédiaire" }
+  "projects": [
+    {
+      "title": "Dashboard Power BI Recouvrement",
+      "description": "Automatisation d’un tableau de bord Power BI pour le suivi des performances du recouvrement, gain de 2h/semaine pour les managers.",
+      "tools": ["Power BI", "SQL", "Excel"],
+      "impact": "Process manuel remplacé, reporting en temps réel."
+    },
+    {
+      "title": "Application Streamlit KPI",
+      "description": "Création d’une application interactive pour visualiser les KPI produit en temps réel.",
+      "tools": ["Python", "Streamlit", "MySQL"],
+      "impact": "Vue unifiée des indicateurs pour les équipes produit."
+    }
   ],
 
   "career_goal": {
@@ -195,30 +203,24 @@
       "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
       "type": "credly",
       "issuer": "Microsoft",
-      "displayText": "Certificat Microsoft"
-    },
-    {
-      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
-      "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "Certificat Microsoft"
-    },
-    {
-      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
-      "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "Certificat Microsoft"
+      "displayText": "PL-300 Power BI Data Analyst Associate",
+      "verification_url": "https://www.credly.com/badges/ad489a08-96ec-41e5-8962-69b64739a4cd/public_url"
     },
     {
       "type": "microsoft-learn",
-      "title": "Certificat Microsoft Learn",
+      "title": "Certificat Microsoft Learn - Power BI",
       "issuer": "Microsoft",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
-      "credential_id": "FRANCKMBE-2082"
+      "credential_id": "FRANCKMBE-2082",
+      "verification_url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1"
     }
   ],
 
   "contact": {
-    "cdiMessage": "Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data."
-  }
+    "cdiMessage": "Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data.",
+    "portfolio": "https://franckmbe-gnw9.vercel.app/"
+  },
+  "interests": [
+    "Veille technologique", "Hackathons", "Open Data", "Sport", "Voyages"
+  ]
 }

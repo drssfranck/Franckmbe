@@ -2,10 +2,15 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import profileImage from '../../../assets/images/profile.jpg'
 import { useCVData } from '../../../hooks/useCVData'
+import { generateCVPdf } from '../../../lib/generateCVPdf'
 
 const HomePage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const cvData = useCVData()
+
+  const handleDownloadCV = () => {
+    generateCVPdf(i18n.language)
+  }
 
   useEffect(() => {
     const heroContent = document.querySelector('.hero-content')
@@ -43,9 +48,9 @@ const HomePage = () => {
               {t('hero.description')}
             </p>
             <div className="hero-ctas">
-              <a href="#cv" className="btn-primary">
+              <button onClick={handleDownloadCV} className="btn-primary">
                 {t('hero.downloadCV')}
-              </a>
+              </button>
               <a href="#contact" className="btn-secondary">
                 {t('hero.contact')}
               </a>

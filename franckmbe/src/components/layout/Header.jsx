@@ -14,14 +14,14 @@ const Header = () => {
   const closeMobileNav = () => setMobileMenuOpen(false)
 
   const navLinks = [
+    { href: '#home', label: t('nav.home') },
     { href: '#about', label: t('nav.about') },
     { href: '#skills', label: t('nav.skills') },
     { href: '#experience', label: t('nav.experience') },
+    { href: '#certifications', label: t('nav.certifications') || 'Certifications' },
     { href: '#projects', label: t('nav.projects') },
     { href: '#services', label: t('nav.services') },
-    { href: '#certifications', label: t('nav.certifications') || 'Certifications' },
     { href: '#contact', label: t('nav.contact') },
-    { href: '#cv', label: t('nav.cv') },
   ]
 
   return (
