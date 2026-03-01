@@ -70,7 +70,11 @@ const HomePage = () => {
               <div className="hero-card-name">{cvData.name}</div>
               <div className="hero-card-title">{cvData.title}</div>
               <div className="hero-card-info">
-                {cvData.hero.cardInfo.map((item, index) => (
+                {(cvData.hero?.cardInfo || [
+                  { icon: '📍', text: cvData.location || 'Location' },
+                  { icon: '⚡', text: 'Data & AI Expert' },
+                  { icon: '✅', text: cvData.availability || 'Available' }
+                ]).map((item, index) => (
                   <div className="hero-card-info-item" key={index}>
                     <div className="info-icon">{item.icon}</div>
                     {item.text}
@@ -78,7 +82,7 @@ const HomePage = () => {
                 ))}
               </div>
               <div className="hero-tech-stack">
-                {cvData.hero.techStack.map((tech, index) => (
+                {(cvData.hero?.techStack || []).map((tech, index) => (
                   <span className="tech-tag" key={index}>{tech}</span>
                 ))}
               </div>

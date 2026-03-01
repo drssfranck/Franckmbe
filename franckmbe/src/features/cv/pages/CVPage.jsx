@@ -1,5 +1,7 @@
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useCVData } from '../../../hooks/useCVData'
+import profileImage from '../../../assets/images/profile.jpg'
 
 const CVPage = () => {
   const { t } = useTranslation()
@@ -16,88 +18,84 @@ const CVPage = () => {
     })
   }
 
+  const [showCV, setShowCV] = React.useState(false);
   return (
     <section id="cv" style={{background: 'var(--bg2)'}}>
       <div className="container">
-        <div className="reveal" style={{marginBottom:'56px'}}>
-          <div className="section-label">{t('cv.sectionLabel')}</div>
-          <h2 className="section-title">{t('cv.title')}<br/><span className="gradient-text">{t('cv.titleGradient')}</span></h2>
-        </div>
-        <div className="cv-container">
-          {/* CV Preview */}
-          <div className="reveal">
-            <div className="cv-preview">
-              <div className="cv-preview-header">
-                <div className="cv-preview-name">{cvData.name}</div>
-                <div className="cv-preview-title">{cvData.title} | Paris · {cvData.availability}</div>
-                <div style={{marginTop:'10px', fontSize:'0.75rem', opacity:'0.7', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-                  <span>✉ {cvData.email}</span>
-                  <span>📱 {cvData.phone}</span>
-                  <span>📍 {cvData.location}</span>
-                  <span>💼 {cvData.linkedin}</span>
+        {!showCV && (
+          <div style={{textAlign:'center', padding:'48px 0'}}>
+            <button className="btn-primary" style={{fontSize:'1.1rem', padding:'16px 32px'}} onClick={() => { setShowCV(true); setTimeout(() => window.print(), 500); }}>
+              Télécharger / Imprimer mon CV
+            </button>
+          </div>
+        )}
+        {showCV && (
+          <div className="cv-preview cv-print-only">
+            <div className="cv-preview-header">
+              <div className="cv-header-top">
+                <div className="cv-avatar-section">
+                  <img src={profileImage} alt={cvData.name} className="cv-avatar" />
+                </div>
+                <div className="cv-header-info">
+                  <div className="cv-preview-name">{cvData.name}</div>
+                  <div className="cv-preview-title">{cvData.title}</div>
+                  <div className="cv-location-badge">{cvData.availability}</div>
                 </div>
               </div>
-              <div className="cv-preview-body">
-                <div className="cv-section-title">{t('cv.profileSection')}</div>
-                <p style={{fontSize:'0.8rem', color:'#374151', lineHeight:'1.6'}}>{cvData.profile}</p>
+              <div className="cv-contact-info">
+                <span>✉ {cvData.email}</span>
+                <span>📱 {cvData.phone}</span>
+                <span>📍 {cvData.location}</span>
+              </div>
+            </div>
+            <div className="cv-preview-body">
+              <div className="cv-section-title">Profil</div>
+              <p style={{fontSize:'0.8rem', color:'#374151', lineHeight:'1.6'}}>{cvData.profile}</p>
 
-                <div className="cv-section-title">{t('cv.experienceSection')}</div>
-                {cvData.experiences && cvData.experiences.slice(0, 3).map((exp, i) => (
-                  <div className="cv-entry" key={i}>
-                    <div className="cv-entry-title">{exp.title} — {exp.company}</div>
-                    <div className="cv-entry-sub">{exp.period} · {exp.description}</div>
-                  </div>
-                ))}
-
-                <div className="cv-section-title">{t('cv.skillsSection')}</div>
-                <div className="cv-skill-pills">
-                  {allSkills.map((skill, i) => (
-                    <span className="cv-pill" key={i}>{skill}</span>
-                  ))}
+              <div className="cv-section-title">Expériences professionnelles</div>
+              {cvData.experiences && cvData.experiences.map((exp, i) => (
+                <div className="cv-entry" key={i}>
+                  <div className="cv-entry-title">{exp.title} — {exp.company}</div>
+                  <div className="cv-entry-sub">{exp.period} {exp.type ? `· ${exp.type}` : ''}</div>
+                  {exp.missions && (
+                    <ul style={{marginLeft:'1em', fontSize:'0.8rem', color:'#374151'}}>
+                      {exp.missions.map((mission, j) => (
+                        <li key={j}>{mission}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {exp.technologies && (
+                    <div style={{marginTop:'0.5em', fontSize:'0.75rem', color:'#2563eb'}}>
+                      <strong>Technologies :</strong> {exp.technologies.join(', ')}
+                    </div>
+                  )}
                 </div>
+              ))}
 
-                <div className="cv-section-title">{t('cv.educationSection')}</div>
-                {cvData.education && cvData.education.slice(0, 2).map((edu, i) => (
-                  <div className="cv-entry" key={i}>
-                    <div className="cv-entry-title">{edu.degree}</div>
-                    <div className="cv-entry-sub">{edu.school} · {edu.year}</div>
-                  </div>
+              <div className="cv-section-title">Compétences</div>
+              <div className="cv-skill-pills">
+                {allSkills.map((skill, i) => (
+                  <span className="cv-pill" key={i}>{skill}</span>
                 ))}
+              </div>
 
-                <div className="cv-section-title">{t('cv.languagesSection')}</div>
-                <div className="cv-skill-pills">
-                  {cvData.languages && cvData.languages.map((lang, i) => (
-                    <span className="cv-pill" key={i}>{lang.name} · {lang.level}</span>
-                  ))}
+              <div className="cv-section-title">Formation</div>
+              {cvData.education && cvData.education.map((edu, i) => (
+                <div className="cv-entry" key={i}>
+                  <div className="cv-entry-title">{edu.degree}</div>
+                  <div className="cv-entry-sub">{edu.institution} {edu.period ? `· ${edu.period}` : ''}</div>
                 </div>
+              ))}
+
+              <div className="cv-section-title">Langues</div>
+              <div className="cv-skill-pills">
+                {cvData.languages && cvData.languages.map((lang, i) => (
+                  <span className="cv-pill" key={i}>{lang.language} · {lang.level}</span>
+                ))}
               </div>
             </div>
           </div>
-
-          {/* CV Actions */}
-          <div className="cv-actions reveal reveal-delay-2">
-            <div className="cv-action-card">
-              <div className="cv-action-icon">📄</div>
-              <div className="cv-action-title">{t('cv.downloadPdfTitle')}</div>
-              <div className="cv-action-desc">{t('cv.downloadPdfDesc')}</div>
-              <a href="#" className="cv-dl-btn primary" onClick={(e) => { e.preventDefault(); window.print(); }}>{t('cv.downloadPdfBtn')}</a>
-            </div>
-
-            <div className="cv-action-card">
-              <div className="cv-action-icon">🖨️</div>
-              <div className="cv-action-title">{t('cv.printTitle')}</div>
-              <div className="cv-action-desc">{t('cv.printDesc')}</div>
-              <button className="cv-dl-btn secondary" onClick={() => window.print()}>{t('cv.printBtn')}</button>
-            </div>
-
-            <div className="cv-action-card">
-              <div className="cv-action-icon">💼</div>
-              <div className="cv-action-title">{t('cv.linkedinTitle')}</div>
-              <div className="cv-action-desc">{t('cv.linkedinDesc')}</div>
-              <a href="https://linkedin.com/in/imbe" target="_blank" className="cv-dl-btn secondary" rel="noopener">{t('cv.linkedinBtn')}</a>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   )

@@ -17,7 +17,29 @@ const ContactPage = () => {
     }, 1500)
   }
 
-  const contactItems = cvData.contact.items || []
+  const contactItems = [
+    {
+      type: 'email',
+      icon: '✉️',
+      label: 'Email',
+      value: cvData.email || 'contact@example.com',
+      link: `mailto:${cvData.email}`
+    },
+    {
+      type: 'tel',
+      icon: '📱',
+      label: 'Téléphone',
+      value: cvData.phone || '+33 6 00 00 00 00',
+      link: `tel:${cvData.phone}`
+    },
+    {
+      type: 'link',
+      icon: '🔗',
+      label: 'LinkedIn',
+      value: 'LinkedIn Profile',
+      link: cvData.linkedin || 'https://linkedin.com'
+    }
+  ].filter(item => item.value)
 
   return (
     <section id="contact">
@@ -56,7 +78,7 @@ const ContactPage = () => {
 
             <div className="cdi-banner" style={{marginTop:'24px'}}>
               <h4>🔍 {t('available.full')}</h4>
-              <p>{cvData.contact.cdiMessage}</p>
+              <p>{cvData.contact?.cdiMessage || 'Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data.'}</p>
             </div>
           </div>
 

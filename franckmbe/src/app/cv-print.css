@@ -1,0 +1,251 @@
+/* CV PRINT STYLES - Design Professionnel Moderne */
+@media print {
+  /* Réinitialiser les styles de base */
+  html, body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Masquer tous les éléments sauf le CV */
+  header,
+  nav,
+  footer,
+  .hero,
+  .about,
+  #about,
+  section:not(#cv),
+  .skills,
+  .experience,
+  .projects,
+  .services,
+  .contact,
+  .reveal,
+  .btn-primary,
+  .btn-secondary,
+  button,
+  a.btn-primary,
+  a.btn-secondary,
+  .cv-actions,
+  .cv-action-card,
+  .section-label,
+  .gradient-text {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Afficher le CV */
+  #cv {
+    display: block !important;
+    visibility: visible !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #222 !important;
+    box-shadow: none !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .cv-preview {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #fff !important;
+    color: #1a1a1a !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+  }
+  
+  .cv-preview-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+    color: #fff !important;
+    padding: 32px 40px !important;
+    display: block !important;
+    border-bottom: 3px solid #1e40af !important;
+  }
+  
+  .cv-header-top {
+    display: flex !important;
+    gap: 24px !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .cv-avatar-section {
+    flex-shrink: 0 !important;
+  }
+  
+  .cv-avatar {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+    border: 3px solid #fff !important;
+    display: block !important;
+  }
+  
+  .cv-header-info {
+    flex: 1 !important;
+    display: block !important;
+  }
+  
+  .cv-location-badge {
+    display: inline-block !important;
+    background: rgba(255,255,255,0.2) !important;
+    color: #fff !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 8px !important;
+  }
+  
+  .cv-contact-info {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    font-size: 10px !important;
+    color: #e0e7ff !important;
+  }
+  
+  .cv-contact-info span {
+    display: inline-block !important;
+  }
+  
+  .cv-preview-name {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    letter-spacing: -0.5px !important;
+  }
+  
+  .cv-preview-title {
+    font-size: 13px !important;
+    color: #e0e7ff !important;
+    margin: 6px 0 12px 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    font-weight: 600 !important;
+  }
+  
+  .cv-preview-body {
+    padding: 28px 40px !important;
+    margin: 0 !important;
+    color: #1a1a1a !important;
+    display: block !important;
+  }
+  
+  .cv-preview-body > * {
+    display: block !important;
+  }
+  
+  .cv-section-title {
+    font-size: 11px !important;
+    color: #fff !important;
+    background: #1e40af !important;
+    border-left: 4px solid #2563eb !important;
+    margin: 18px 0 10px 0 !important;
+    padding: 8px 12px !important;
+    display: block !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+  }
+  
+  .cv-entry {
+    margin-bottom: 12px !important;
+    display: block !important;
+    page-break-inside: avoid !important;
+  }
+  
+  .cv-entry-title {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #1e40af !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
+  .cv-entry-sub {
+    font-size: 10px !important;
+    color: #666 !important;
+    margin: 3px 0 6px 0 !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
+  ul {
+    display: block !important;
+    margin: 6px 0 !important;
+    padding-left: 16px !important;
+  }
+  
+  li {
+    display: list-item !important;
+    list-style: disc !important;
+    margin: 2px 0 !important;
+    padding: 0 !important;
+    color: #333 !important;
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .cv-skill-pills {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .cv-pill {
+    display: inline-block !important;
+    background: #dbeafe !important;
+    color: #1e40af !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    padding: 3px 8px !important;
+    border-radius: 3px !important;
+    margin: 0 !important;
+    text-transform: capitalize !important;
+  }
+  
+  p {
+    display: block !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    color: #333 !important;
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+    text-align: justify !important;
+  }
+  
+  /* Mise en page A4 */
+  @page {
+    margin: 16mm 14mm;
+    size: A4;
+  }
+}

@@ -11,35 +11,40 @@ const AboutPage = () => {
           <div className="about-text reveal">
             <div className="section-label">{t('about.sectionLabel')}</div>
             <h2 className="section-title">{t('about.title')}<br/><span className="gradient-text">{t('about.titleGradient')}</span></h2>
-            {cvData.about.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-            <div className="about-highlight">🎯 {cvData.about.highlight}</div>
+            {cvData.about?.summary && <p>{cvData.about.summary}</p>}
+            {cvData.about?.objective && <p>{cvData.about.objective}</p>}
+            <div className="about-highlight">🎯 {cvData.about?.summary || 'Professionnel passionné par la data'}</div>
           </div>
           <div className="reveal reveal-delay-2">
             <div className="about-cdi-card">
               <div className="cdi-header">
                 <div className="cdi-icon">✅</div>
                 <div>
-                  <div className="cdi-title">{cvData.about.cdi.title}</div>
-                  <div style={{fontSize:'0.75rem', color:'var(--text-muted)'}}>{cvData.about.cdi.subtitle}</div>
+                  <div className="cdi-title">CDI Disponible</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--text-muted)'}}>Septembre 2026</div>
                 </div>
               </div>
               <div className="cdi-list">
-                {cvData.about.cdi.items.map((item, index) => (
-                  <div className="cdi-item" key={index}>
-                    <div className="cdi-dot"></div>
-                    {item}
-                  </div>
-                ))}
+                <div className="cdi-item">
+                  <div className="cdi-dot"></div>
+                  Disponibilité: {cvData.availability || 'Septembre 2026'}
+                </div>
+                <div className="cdi-item">
+                  <div className="cdi-dot"></div>
+                  Localisation: {cvData.location || 'Paris'}
+                </div>
+                <div className="cdi-item">
+                  <div className="cdi-dot"></div>
+                  Prêt pour défis data stratégiques
+                </div>
               </div>
             </div>
             <div className="lang-card">
               <h4>{t('about.languagesSection', 'Langues')}</h4>
               <div className="lang-items">
-                {cvData.languages.map((lang, index) => (
+                {(cvData.languages || []).map((lang, index) => (
                   <div className="lang-item" key={index}>
-                    <span className="lang-name">{lang.name}</span>
+                    <span className="lang-name">{lang.language || 'Langue'}</span>
                     <span className="lang-level">{lang.level}</span>
                   </div>
                 ))}

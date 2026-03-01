@@ -47,16 +47,16 @@ const ExperiencePage = () => {
                 <div className="timeline-title">{exp.title}</div>
                 <div className="timeline-company">{exp.company}</div>
                 <div className="timeline-tasks">
-                  {exp.tasks.map((task, i) => (
+                  {(exp.missions || []).map((mission, i) => (
                     <div className="timeline-task" key={i}>
                       <div className="task-dot"></div>
-                      {task}
+                      {mission}
                     </div>
                   ))}
                 </div>
                 <div className="timeline-tags">
-                  {exp.tags.map((tag, i) => (
-                    <span className="xp-tag" key={i}>{tag}</span>
+                  {(exp.technologies || []).map((tech, i) => (
+                    <span className="xp-tag" key={i}>{tech}</span>
                   ))}
                 </div>
               </div>
