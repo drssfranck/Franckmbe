@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ProjectCard from '../components/ProjectCard'
-import projects from '../../../data/projects.json'
+import { useProjectsData } from '../../../hooks/useProjectsData'
 
 const ProjectsPage = () => {
   const { t } = useTranslation()
+  const projects = useProjectsData()
   const [filter, setFilter] = useState('all')
 
   const filters = [

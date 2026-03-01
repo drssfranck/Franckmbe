@@ -1,0 +1,319 @@
+{
+  "profile": {
+    "username": "drssfranck",
+    "name": "Franck MBE",
+    "bio": "Data Engineer | Building data pipelines with Python & SQL Interested in ETL, data quality and scalable architectures",
+    "profile_url": "https://github.com/drssfranck",
+    "location": "Aubervillier, France",
+    "total_public_repos": 15
+  },
+  "repositories": [
+    {
+      "name": "Franckmbe",
+      "description": "Portfolio and CV website",
+      "url": "https://github.com/drssfranck/Franckmbe",
+      "readme_url": "https://github.com/drssfranck/Franckmbe/blob/main/README.md",
+      "languages": [
+        "CSS (63.3%)",
+        "JavaScript (35.5%)",
+        "HTML (1.2%)"
+      ],
+      "technologies": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "JavaScript"
+      ],
+      "last_updated": "7 hours ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "mlops",
+      "description": "Application web interactive développée avec Streamlit et DuckDB permettant d'analyser des données de ventes via des KPI dynamiques et des visualisations interactives",
+      "url": "https://github.com/drssfranck/mlops",
+      "readme_url": "https://github.com/drssfranck/mlops/blob/main/README.md",
+      "languages": [
+        "Python (100%)"
+      ],
+      "technologies": [
+        "Streamlit",
+        "DuckDB",
+        "Pandas",
+        "Plotly",
+        "GitHub Actions"
+      ],
+      "last_updated": "2 weeks ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "fraudbank",
+      "description": "Streamlit dashboard application consuming a FastAPI Banking Transactions API. Provides portfolio visualization, transaction filtering, and financial analytics in real time",
+      "url": "https://github.com/drssfranck/fraudbank",
+      "readme_url": "https://github.com/drssfranck/fraudbank/blob/main/README.md",
+      "languages": [
+        "Python (99.9%)",
+        "Dockerfile (0.1%)"
+      ],
+      "technologies": [
+        "Streamlit",
+        "FastAPI",
+        "Pandas",
+        "Plotly",
+        "Requests",
+        "Docker"
+      ],
+      "last_updated": "2 weeks ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "FastApi",
+      "description": "API REST avec FastAPI pour analyser les transactions financières et détecter les fraudes. Dataset de 1.26 GB téléchargé automatiquement depuis Kaggle",
+      "url": "https://github.com/drssfranck/FastApi",
+      "readme_url": "https://github.com/drssfranck/FastApi/blob/main/README.md",
+      "languages": [
+        "Python (100%)"
+      ],
+      "technologies": [
+        "FastAPI",
+        "Python",
+        "Pandas",
+        "Pydantic",
+        "Docker",
+        "CI/CD GitHub Actions"
+      ],
+      "last_updated": "2 weeks ago",
+      "stars": 0,
+      "forks": 0,
+      "contributors": 4
+    },
+    {
+      "name": "heart_failure_project",
+      "description": "Projet Machine Learning pour prédire la santé cardiaque des patients",
+      "url": "https://github.com/drssfranck/heart_failure_project",
+      "readme_url": "https://github.com/drssfranck/heart_failure_project/blob/main/README.md",
+      "languages": [
+        "Python (100%)"
+      ],
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "Scikit-learn",
+        "Streamlit",
+        "Pandas"
+      ],
+      "last_updated": "2 months ago",
+      "stars": 0,
+      "forks": 0,
+      "contributors": 2
+    },
+    {
+      "name": "projet_python_2_mba",
+      "description": "Ce projet a pour objectif de développer une API en Python avec FastAPI pour exposer des transactions financières fictives. Il permet de charger, nettoyer et servir des données de transactions, cartes et utilisateurs",
+      "url": "https://github.com/drssfranck/projet_python_2_mba",
+      "readme_url": "https://github.com/drssfranck/projet_python_2_mba/blob/main/README.md",
+      "languages": [
+        "Python"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Pandas",
+        "Pytest",
+        "unittest"
+      ],
+      "last_updated": "2 weeks ago",
+      "stars": 0,
+      "forks": 0,
+      "is_forked_from": "Noobzik/projet_python_2_mba"
+    },
+    {
+      "name": "streamlitdash",
+      "description": "Création d'un chatbot",
+      "url": "https://github.com/drssfranck/streamlitdash",
+      "readme_url": "https://github.com/drssfranck/streamlitdash/blob/main/README.md",
+      "languages": [
+        "Python (100%)"
+      ],
+      "technologies": [
+        "Streamlit",
+        "Python",
+        "LLM/Chatbot"
+      ],
+      "last_updated": "3 weeks ago",
+      "stars": 0,
+      "forks": 0,
+      "contributors": 2
+    },
+    {
+      "name": "MBAESG_EVALUATION_MANAGEMENT_OPERATIONNEL",
+      "description": "Application web interactive développée avec Streamlit et DuckDB permettant d'analyser des données de ventes via des KPI dynamiques et des visualisations interactives",
+      "url": "https://github.com/drssfranck/MBAESG_EVALUATION_MANAGEMENT_OPERATIONNEL",
+      "readme_url": "https://github.com/drssfranck/MBAESG_EVALUATION_MANAGEMENT_OPERATIONNEL/blob/main/README.md",
+      "languages": [
+        "Python"
+      ],
+      "technologies": [
+        "Streamlit",
+        "DuckDB",
+        "Pandas",
+        "Plotly"
+      ],
+      "last_updated": "3 weeks ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "ANYCOMPANY_LAB",
+      "description": "Projet Data Analytics - AnyCompany. Pipeline de données complet pour l'analyse des performances commerciales, marketing et opérationnelles du secteur food & beverage",
+      "url": "https://github.com/drssfranck/ANYCOMPANY_LAB",
+      "readme_url": "https://github.com/drssfranck/ANYCOMPANY_LAB/blob/main/README.md",
+      "languages": [
+        "Python (100%)"
+      ],
+      "technologies": [
+        "Python",
+        "Snowflake",
+        "Streamlit",
+        "SQL",
+        "Amazon S3",
+        "GitHub",
+        "ETL/Data Pipeline"
+      ],
+      "last_updated": "2 months ago",
+      "stars": 0,
+      "forks": 0,
+      "contributors": 2
+    },
+    {
+      "name": "BankApi",
+      "description": "Banking API for data analysis and management",
+      "url": "https://github.com/drssfranck/BankApi",
+      "readme_url": "https://github.com/drssfranck/BankApi/blob/main/README.MD",
+      "languages": [
+        "Python (92%)",
+        "Dockerfile (8%)"
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "pandas",
+        "pytest"
+      ],
+      "last_updated": "3 months ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "landing",
+      "description": "NadiShop - Landing page / E-commerce website",
+      "url": "https://github.com/drssfranck/landing",
+      "readme_url": "https://github.com/drssfranck/landing/blob/main/README.md",
+      "live_site": "https://landing-74l6.onrender.com/",
+      "languages": [
+        "HTML (100%)"
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "last_updated": "2 months ago",
+      "stars": 0,
+      "forks": 0,
+      "contributors": 3
+    },
+    {
+      "name": "Librairie",
+      "description": "Tableau de Bord pour Librairie - Library Management Dashboard",
+      "url": "https://github.com/drssfranck/Librairie",
+      "readme_url": "https://github.com/drssfranck/Librairie/blob/main/README.md",
+      "languages": [
+        "Power BI"
+      ],
+      "technologies": [
+        "Power BI",
+        "Business Intelligence",
+        "Data Visualization"
+      ],
+      "last_updated": "10 months ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "Valeur_fontiere",
+      "description": "SQL and Data Analysis Project",
+      "url": "https://github.com/drssfranck/Valeur_fontiere",
+      "readme_url": "https://github.com/drssfranck/Valeur_fontiere/blob/main/README.md",
+      "languages": [
+        "Jupyter Notebook (100%)"
+      ],
+      "technologies": [
+        "SQL",
+        "Jupyter Notebook",
+        "Python",
+        "Data Analysis"
+      ],
+      "last_updated": "11 months ago",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "airbnbopendata",
+      "description": "Airbnb Open Data Analysis Project",
+      "url": "https://github.com/drssfranck/airbnbopendata",
+      "readme_url": "https://github.com/drssfranck/airbnbopendata/blob/main/README.md",
+      "languages": [],
+      "technologies": [
+        "Data Analysis",
+        "Python"
+      ],
+      "last_updated": "last month",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "name": "CityBike",
+      "description": "CityBike Data Analysis Project",
+      "url": "https://github.com/drssfranck/CityBike",
+      "status": "empty",
+      "languages": [],
+      "technologies": [],
+      "last_updated": "January 17",
+      "stars": 0,
+      "forks": 0
+    }
+  ],
+  "summary": {
+    "total_repositories": 15,
+    "primary_languages": [
+      "Python",
+      "HTML/CSS",
+      "JavaScript",
+      "Jupyter Notebook",
+      "SQL"
+    ],
+    "most_used_technologies": [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "DuckDB",
+      "Pandas",
+      "Plotly",
+      "Machine Learning",
+      "Data Analysis",
+      "Docker",
+      "GitHub Actions"
+    ],
+    "project_categories": {
+      "data_engineering": 5,
+      "web_applications": 4,
+      "machine_learning": 2,
+      "data_visualization": 2,
+      "landing_pages": 2
+    }
+  }
+}

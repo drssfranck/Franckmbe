@@ -19,9 +19,9 @@
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
     "description": "Passionné par la donnée, spécialisé en Big Data, Business Intelligence et Data Engineering. Je transforme des données brutes en décisions stratégiques — avec Python, Power BI et l'écosystème Azure.",
-    "downloadCV": "↓ Télécharger mon CV",
-    "contact": "✉ Me contacter",
-    "linkedin": "LinkedIn →"
+    "downloadCV": "Télécharger mon CV",
+    "contact": "Me contacter",
+    "linkedin": "LinkedIn"
   },
   "about": {
     "sectionLabel": "À propos",
@@ -33,7 +33,7 @@
       "Mon parcours couvre l'ensemble de la chaîne de valeur data : de la collecte et la transformation (pipelines ETL, Azure Data Lake) jusqu'à la visualisation et la présentation métier (Power BI, Tableau, Streamlit).",
       "Bilingue français / anglais B1-B2, je suis à l'aise aussi bien dans des environnements techniques qu'en présentation d'insights à des parties prenantes non-techniques."
     ],
-    "highlight": "🎯 Mon objectif : rejoindre une équipe Data dans le cadre d'un CDI à Paris (ou full-remote) à partir de Septembre 2026, pour contribuer à des projets data impactants à fort enjeu business.",
+    "highlight": "Mon objectif: rejoindre une équipe Data dans le cadre d'un CDI à Paris (ou full-remote) à partir de Septembre 2026, pour contribuer à des projets data impactants à fort enjeu business.",
     "cdiTitle": "Recherche CDI — Septembre 2026",
     "cdiSubtitle": "Profil disponible dès fin d'alternance",
     "cdiItems": [
@@ -125,10 +125,10 @@
     "languagesSection": "Langues",
     "downloadPdfTitle": "Télécharger le CV PDF",
     "downloadPdfDesc": "Version PDF optimisée ATS, prête à l'emploi pour les recruteurs et systèmes de suivi des candidatures.",
-    "downloadPdfBtn": "↓ Télécharger PDF",
+    "downloadPdfBtn": "Télécharger PDF",
     "printTitle": "Imprimer le CV",
     "printDesc": "Version imprimable directement depuis votre navigateur en format A4.",
-    "printBtn": "🖨 Imprimer",
+    "printBtn": "Imprimer",
     "linkedinTitle": "Profil LinkedIn",
     "linkedinDesc": "Consultez mon profil LinkedIn complet avec recommandations et historique détaillé.",
     "linkedinBtn": "→ Voir LinkedIn"

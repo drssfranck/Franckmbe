@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Dashboard Analytics Ventes",
-    "description": "Dashboard interactif Power BI pour l'analyse des ventes e-commerce avec suivi KPI temps réel, segmentation client et prévisions.",
+    "title": "Sales Analytics Dashboard",
+    "description": "Interactive Power BI dashboard for e-commerce sales analysis with real-time KPI tracking, customer segmentation and forecasting.",
     "category": "dashboard",
     "technologies": ["Power BI", "SQL", "DAX"],
     "visual": "📊",
@@ -12,8 +12,8 @@
   },
   {
     "id": 2,
-    "title": "MLOps Dashboard Analytics",
-    "description": "Dashboard Streamlit avec DuckDB pour analyse et ML des ventes. Pipeline complet de data science avec visualisations temps réel.",
+    "title": "MLOps Analytics Dashboard",
+    "description": "Streamlit dashboard with DuckDB for sales analytics and machine learning. Complete data science pipeline with real-time visualizations.",
     "category": "dashboard",
     "technologies": ["Python", "Streamlit", "DuckDB", "Scikit-learn"],
     "visual": "🔧",
@@ -23,8 +23,8 @@
   },
   {
     "id": 3,
-    "title": "API FastAPI Détection Fraude",
-    "description": "Service API REST FastAPI pour analyser les transactions et détecter les anomalies frauduleuses en temps réel avec machine learning.",
+    "title": "FastAPI Fraud Detection API",
+    "description": "REST API service built with FastAPI to analyze transactions and detect fraudulent anomalies in real-time using machine learning.",
     "category": "etl",
     "technologies": ["Python", "FastAPI", "Machine Learning", "SQL"],
     "visual": "🧠",
@@ -34,8 +34,8 @@
   },
   {
     "id": 4,
-    "title": "Pipeline Data Lake Snowflake",
-    "description": "Architecture Data Lake complète avec Snowflake, SQL et S3. Pipeline ANYCOMPANY avec modélisation en étoile et Bronze/Silver/Gold.",
+    "title": "Snowflake Data Lake Pipeline",
+    "description": "Complete Data Lake architecture with Snowflake, SQL and AWS S3. ANYCOMPANY pipeline with star schema modeling and Bronze/Silver/Gold layers.",
     "category": "etl",
     "technologies": ["Snowflake", "SQL", "AWS S3", "Python"],
     "visual": "❄️",
@@ -45,8 +45,8 @@
   },
   {
     "id": 5,
-    "title": "Dashboard Streamlit Kasaltech",
-    "description": "Application web analytique développée avec Streamlit et MySQL pour visualiser en temps réel les métriques produit et KPIs.",
+    "title": "Streamlit Analytics Dashboard",
+    "description": "Web analytics application developed with Streamlit and MySQL to visualize real-time product metrics and KPIs.",
     "category": "dashboard",
     "technologies": ["Python", "Streamlit", "MySQL"],
     "visual": "🚀",
@@ -56,8 +56,8 @@
   },
   {
     "id": 6,
-    "title": "Prédiction Défaillance Cardiaque",
-    "description": "Projet Machine Learning complet : prédiction du risque de défaillance cardiaque. Classification avec Random Forest et XGBoost.",
+    "title": "Heart Failure Prediction ML",
+    "description": "Complete machine learning project: predicting the risk of heart failure. Classification using Random Forest and XGBoost models.",
     "category": "data-viz",
     "technologies": ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
     "visual": "📈",
@@ -67,8 +67,8 @@
   },
   {
     "id": 7,
-    "title": "Gestion Librairie Power BI",
-    "description": "Dashboard Power BI pour gestion et analyse des données de librairie. Suivi des emprunts, inventaire et statistiques membres.",
+    "title": "Library Management Power BI",
+    "description": "Power BI dashboard for library data management and analytics. Tracking loans, inventory and member statistics.",
     "category": "dashboard",
     "technologies": ["Power BI", "SQL", "DAX"],
     "visual": "📚",
@@ -78,8 +78,8 @@
   },
   {
     "id": 8,
-    "title": "Analyse Données Airbnb",
-    "description": "Analyse exploratoire et visualisation des données Airbnb. Jupyter Notebook avec EDA, statistiques et insights marché.",
+    "title": "Airbnb Data Analysis",
+    "description": "Exploratory data analysis and visualization of Airbnb data. Jupyter notebook with EDA, statistics and market insights.",
     "category": "data-viz",
     "technologies": ["Python", "Jupyter", "Pandas", "Matplotlib"],
     "visual": "🏠",

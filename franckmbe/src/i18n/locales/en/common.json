@@ -19,9 +19,9 @@
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
     "description": "Passionate about data, specialized in Big Data, Business Intelligence and Data Engineering. I transform raw data into strategic decisions — with Python, Power BI and the Azure ecosystem.",
-    "downloadCV": "↓ Download my resume",
-    "contact": "✉ Contact me",
-    "linkedin": "LinkedIn →"
+    "downloadCV": "Download my resume",
+    "contact": "Contact me",
+    "linkedin": "LinkedIn"
   },
   "about": {
     "sectionLabel": "About",
@@ -33,7 +33,7 @@
       "My career spans the entire data value chain: from collection and transformation (ETL pipelines, Azure Data Lake) to visualization and business presentation (Power BI, Tableau, Streamlit).",
       "Bilingual French / English B1-B2, I'm comfortable both in technical environments and presenting insights to non-technical stakeholders."
     ],
-    "highlight": "🎯 My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
+    "highlight": "My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
     "cdiTitle": "Seeking Permanent Role — September 2026",
     "cdiSubtitle": "Profile available at end of apprenticeship",
     "cdiItems": [
@@ -125,10 +125,10 @@
     "languagesSection": "Languages",
     "downloadPdfTitle": "Download PDF Resume",
     "downloadPdfDesc": "ATS-optimized PDF version, ready to use for recruiters and applicant tracking systems.",
-    "downloadPdfBtn": "↓ Download PDF",
+    "downloadPdfBtn": "Download PDF",
     "printTitle": "Print Resume",
     "printDesc": "Printable version directly from your browser in A4 format.",
-    "printBtn": "🖨 Print",
+    "printBtn": "Print",
     "linkedinTitle": "LinkedIn Profile",
     "linkedinDesc": "View my complete LinkedIn profile with recommendations and detailed history.",
     "linkedinBtn": "→ View LinkedIn"
