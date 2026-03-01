@@ -6,6 +6,7 @@
     "experience": "Experience",
     "projects": "Projects",
     "services": "Services",
+    "certifications": "Certifications",
     "contact": "Contact",
     "cv": "Resume",
     "hire": "Hire me"
@@ -18,7 +19,7 @@
     "tag": "Available for permanent contract — September 2026 · Paris <50km · Remote OK",
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
-    "description": "Passionate about data, specialized in Big Data, Business Intelligence and Data Engineering. I transform raw data into strategic decisions — with Python, Power BI and the Azure ecosystem.",
+    "description": "Passionate about data, specializing in turning data into strategic decision-making drivers. I help organizations structure their data, automate ETL pipelines, and build high-performance decision dashboards using Python, SQL, Power BI, and the Azure ecosystem. My goal: transform raw data into measurable competitive advantage.",
     "downloadCV": "Download my resume",
     "contact": "Contact me",
     "linkedin": "LinkedIn"

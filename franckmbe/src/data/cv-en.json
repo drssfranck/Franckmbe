@@ -1,108 +1,114 @@
 {
   "name": "Franck MBE",
   "title": "Data Analyst · Data Engineer",
-  "location": "Paris <50km",
+  "location": "Paris (<50km)",
   "email": "drssfranck@gmail.com",
   "phone": "+33 6 43 74 68 40",
-  "linkedin": "linkedin.com/in/imbe",
-  "availability": "Permanent Role September 2026",
-  "profile": "Passionate Data Analyst with expertise in Big Data, BI and Data Engineering. Specialized in data-driven solutions, Azure cloud and visualization. Currently interning at ENI France, seeking a permanent role from September 2026.",
+  "linkedin": "https://linkedin.com/in/imbe",
+  "availability": "Permanent Contract - September 2026",
+  "profile": "Business-oriented Data Analyst with strong expertise in Data Engineering, BI and Azure cloud environments. Specialized in designing ETL pipelines, data modeling (Star Schema) and reporting automation. Currently in apprenticeship at ENI France, I am looking for a permanent contract from September 2026.",
+
   "hero": {
     "stats": [
       { "value": "5+", "label": "Years XP" },
-      { "value": "4+", "label": "Data Projects" },
+      { "value": "6+", "label": "Data Projects" },
       { "value": "MBA", "label": "Big Data & AI" },
       { "value": "Paris", "label": "< 50 km" }
     ],
-    "techStack": ["Python", "SQL", "Power BI", "Azure", "Snowflake", "Tableau", "DAX", "ETL"],
-    "cardInfo": [
-      { "icon": "📍", "text": "Paris, Île-de-France (<50km)" },
-      { "icon": "✉️", "text": "drssfranck@gmail.com" },
-      { "icon": "📱", "text": "+33 6 43 74 68 40" },
-      { "icon": "🎓", "text": "MBA Big Data & AI — MBA ESG (2027)" },
-      { "icon": "💼", "text": "Intern at ENI France (2025–2026)" }
+    "techStack": [
+      "Python",
+      "SQL",
+      "Power BI",
+      "Azure",
+      "Databricks",
+      "Snowflake",
+      "DAX",
+      "ETL"
     ]
   },
+
   "about": {
-    "paragraphs": [
-      "With an MBA in Big Data & AI from MBA ESG and hands-on experience as an intern at ENI France, I combine analytical rigor with business acumen to deliver actionable insights.",
-      "My career spans the entire data value chain: from collection and transformation (ETL pipelines, Azure Data Lake) to visualization and business presentation (Power BI, Tableau, Streamlit).",
-      "Bilingual French / English B1-B2, I'm comfortable both in technical environments and presenting insights to non-technical stakeholders."
-    ],
-    "highlight": "🎯 My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
-    "cdi": {
-      "title": "Seeking Permanent Role — September 2026",
-      "subtitle": "Profile available at end of internship",
-      "items": [
-        "Data Analyst / BI Analyst",
-        "Data Engineer / Analytics Engineer",
-        "Paris Île-de-France (<50km)",
-        "Partial or full remote OK",
-        "Sector: All sectors (Energy, Finance, Tech, E-commerce…)"
-      ]
-    }
+    "summary": "With an MBA in Big Data & AI and hands-on experience in apprenticeship at ENI France, I master the entire data value chain: ingestion, transformation, modeling, visualization and governance. I combine technical expertise with business understanding to deliver data solutions with high business impact.",
+    "objective": "Join a Data team on a permanent contract in Paris or full-remote from September 2026 to contribute to high-stakes strategic projects."
   },
-  "languages": [
-    { "name": "French", "level": "Native" },
-    { "name": "English", "level": "B1-B2" }
-  ],
+
   "experiences": [
     {
       "title": "Data Analyst / Data Engineer",
       "company": "ENI France",
-      "period": "Sept. 2025 – Sept. 2026",
-      "type": "Internship · In progress",
-      "description": "Azure, Fabric, ETL, Power BI",
-      "tasks": [
-        "Design and maintenance of ETL pipelines on Azure",
-        "Development of business dashboards on Microsoft Fabric",
-        "Data Lake architecture (Bronze / Silver / Gold)",
-        "Analysis and reporting of energy data"
+      "period": "September 2025 – September 2026",
+      "type": "Apprenticeship",
+      "environment": ["Azure", "Databricks", "Power BI", "SAP"],
+      "missions": [
+        "Design and deployment of a datamart for tracking blocked payments, using Star Schema modeling to optimize query times by 30% and facilitate analysis by business teams.",
+        "Automation of a recovery team performance dashboard in Power BI, replacing a 2-day monthly manual Excel process, now providing managers with real-time visibility.",
+        "Development of complex SQL queries and materialized views in Databricks for dynamic monitoring of payment plans, integrated in real-time into Power BI for accurate and up-to-date reporting.",
+        "Implementation of a Databricks access governance system via Microsoft Entra ID and SCIM API, automating user audit and compliance while reducing security risks.",
+        "Engineering of a PySpark data pipeline to consolidate financial flows from SAP and Databricks, enabling automated calculation and analysis of the Cash Curve for the finance department.",
+        "Orchestration of robust data transformation pipelines via Databricks Jobs, ensuring data reliability and freshness for recovery and finance teams."
       ],
-      "tags": ["Azure Data Lake", "Microsoft Fabric", "Power BI", "Python", "ETL"]
+      "technologies": [
+        "Python",
+        "PySpark",
+        "SQL",
+        "Databricks",
+        "Power BI",
+        "DAX",
+        "Power Query",
+        "Microsoft Entra ID",
+        "SCIM API",
+        "SAP"
+      ]
     },
     {
       "title": "Data Analyst",
       "company": "Kasaltech",
       "period": "2025",
-      "type": "Data Analyst Mission",
-      "description": "Python, Streamlit, MySQL",
-      "tasks": [
-        "Development of an analytical dashboard with Streamlit + MySQL",
-        "Python scripts for data analysis and cleaning",
-        "Presentation of product insights to decision-making teams"
+      "type": "Mission",
+      "missions": [
+        "Creation of an interactive analytics application with Streamlit, connected to a MySQL database, providing product teams with a unified view of real-time performance KPIs.",
+        "Automation of data cleaning and preparation processes via Python scripts, reducing manual processing time and improving data quality for analysis.",
+        "Translation of complex business needs into intuitive dashboards, facilitating strategic decision-making for new feature launches."
       ],
-      "tags": ["Python", "Streamlit", "MySQL", "Data Viz"]
+      "technologies": ["Python", "Streamlit", "MySQL"]
     },
     {
       "title": "Data Engineer",
-      "company": "MBA ESG · Advanced Academic Project",
-      "period": "2025 – MBA Project",
-      "type": "Data Engineering",
-      "description": "Azure, ETL, Medallion Architecture, Fabric",
-      "tasks": [
-        "Construction of end-to-end ETL pipelines",
-        "Azure Data Lake integration for storage and transformation",
-        "Implementation of Medallion architecture (Bronze/Silver/Gold)",
-        "Reporting dashboards via Microsoft Fabric"
+      "company": "MBA ESG - Academic Project",
+      "period": "2025",
+      "type": "Data Engineering Project",
+      "missions": [
+        "Design and implementation of complete ETL pipelines, from ingestion of heterogeneous sources to data availability in a data lake.",
+        "Implementation of the Medallion architecture (Bronze, Silver, Gold) on Azure Data Lake to structure and secure data, ensuring traceability and quality.",
+        "Development of semantic models in Microsoft Fabric to feed decision-making dashboards, providing a 360° view of project performance indicators."
       ],
-      "tags": ["Azure", "ETL", "Medallion Architecture", "Fabric"]
+      "technologies": ["Azure Data Lake", "ETL", "Microsoft Fabric"]
     },
     {
       "title": "Business Analyst",
       "company": "Fast And Sure Travel",
       "period": "2021 – 2025",
-      "type": "Business Analyst",
-      "description": "Power BI, CRM/ERP, KPI Reporting",
-      "tasks": [
-        "Analysis of CRM, ERP and business logs for insight extraction",
-        "Creation of KPI dashboards for performance tracking",
-        "Workshop facilitation with business teams",
-        "Training and support of teams on data tools"
+      "missions": [
+        "Led analysis of CRM and ERP data to identify growth levers, resulting in optimized marketing campaigns and increased customer retention.",
+        "Development and maintenance of KPI dashboards in Power BI, used daily by management to monitor activity and adjust strategy.",
+        "Facilitation of scoping workshops with business teams to formalize needs and prioritize developments, ensuring perfect alignment between technical solutions and business challenges.",
+        "Design and delivery of BI tool training sessions for operational teams, promoting data culture adoption and user autonomy."
       ],
-      "tags": ["CRM Analysis", "KPI Dashboards", "Excel", "Power BI"]
+      "technologies": ["Power BI", "Excel", "CRM", "ERP"]
+    },
+    {
+      "title": "IT Technician",
+      "company": "FOCEP",
+      "period": "2019 – 2021",
+      "missions": [
+        "Preventive and corrective maintenance of the company's systems and network infrastructure, ensuring 99.9% service availability.",
+        "Deployment and security of workstations, including implementation of backup and security policies to prevent data loss.",
+        "On-site technical support for 150 users, with a 95% satisfaction rate on incident resolution."
+      ],
+      "technologies": ["Network", "IT Security", "IT Support"]
     }
   ],
+
   "skills": {
     "categories": [
       {
@@ -110,9 +116,10 @@
         "icon": "💻",
         "color": "rgba(59, 130, 246, 0.1)",
         "items": [
-          { "name": "Python", "proficiency": 90 },
-          { "name": "SQL", "proficiency": 85 },
-          { "name": "JavaScript", "proficiency": 60 }
+          { "name": "Python", "level": 90 },
+          { "name": "SQL", "level": 85 },
+          { "name": "PySpark", "level": 70 },
+          { "name": "NoSQL", "level": 60 }
         ]
       },
       {
@@ -120,9 +127,10 @@
         "icon": "📊",
         "color": "rgba(34, 197, 94, 0.1)",
         "items": [
-          { "name": "Power BI", "proficiency": 90 },
-          { "name": "Tableau", "proficiency": 80 },
-          { "name": "Streamlit", "proficiency": 85 }
+          { "name": "Power BI", "level": 90 },
+          { "name": "Tableau", "level": 80 },
+          { "name": "DAX", "level": 80 },
+          { "name": "Streamlit", "level": 85 }
         ]
       },
       {
@@ -130,61 +138,87 @@
         "icon": "☁️",
         "color": "rgba(168, 85, 247, 0.1)",
         "items": [
-          { "name": "Azure", "proficiency": 85 },
-          { "name": "Snowflake", "proficiency": 80 },
-          { "name": "dbt", "proficiency": 75 }
+          { "name": "Azure Data Lake", "level": 85 },
+          { "name": "Microsoft Fabric", "level": 80 },
+          { "name": "Databricks", "level": 80 },
+          { "name": "Snowflake", "level": 75 }
         ]
       },
       {
-        "name": "Data & Tools",
+        "name": "Tools & Data",
         "icon": "🛠️",
         "color": "rgba(249, 115, 22, 0.1)",
         "items": [
-          { "name": "ETL", "proficiency": 90 },
-          { "name": "DAX", "proficiency": 80 },
-          { "name": "Git", "proficiency": 85 }
+          { "name": "ETL Pipelines", "level": 90 },
+          { "name": "Medallion Architecture", "level": 80 },
+          { "name": "Star Schema Modeling", "level": 80 },
+          { "name": "Git", "level": 85 },
+          { "name": "Advanced Excel", "level": 80 },
+          { "name": "Power Query", "level": 75 }
         ]
       }
     ]
   },
+
   "education": [
     {
-      "year": "2024-2027",
       "degree": "MBA Big Data & Artificial Intelligence",
-      "school": "MBA ESG (Paris)",
+      "institution": "MBA ESG - Paris",
+      "period": "2025 – 2027",
       "status": "In progress"
     },
     {
-      "year": "2017-2021",
       "degree": "Bachelor's Degree in Computer Science",
-      "school": "University of Yaoundé (Cameroon)",
-      "status": null
+      "institution": "University of Yaoundé 1",
+      "period": "2014 – 2018"
     }
   ],
-  "services": [
+
+  "languages": [
+    { "language": "French", "level": "C2 - Native" },
+    { "language": "English", "level": "B1-B2 - Intermediate" }
+  ],
+
+  "career_goal": {
+    "position_targets": [
+      "Data Analyst",
+      "BI Analyst",
+      "Data Engineer",
+      "Analytics Engineer"
+    ],
+    "location": "Paris / Full Remote",
+    "start_date": "September 2026"
+  },
+
+  "certifications": [
     {
-      "icon": "📊",
-      "title": "BI Consulting",
-      "description": "Strategic advice and implementation of BI solutions tailored to your business needs.",
-      "color": "rgba(59, 130, 246, 0.1)"
+      "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Microsoft Certificate"
     },
     {
-      "icon": "🔧",
-      "title": "ETL Development",
-      "description": "Design and development of robust ETL pipelines for your data infrastructure.",
-      "color": "rgba(34, 197, 94, 0.1)"
+      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Microsoft Certificate"
     },
     {
-      "icon": "🧠",
-      "title": "Data Strategy",
-      "description": "Guidance in data strategy and implementation of data-driven approaches.",
-      "color": "rgba(168, 85, 247, 0.1)"
+      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Microsoft Certificate"
     },
     {
-      "icon": "📈",
-      "title": "Dashboard Development",
-      "description": "Creation of interactive dashboards for real-time monitoring and decision-making.",
-      "color": "rgba(249, 115, 22, 0.1)"
+      "type": "microsoft-learn",
+      "title": "Microsoft Learn Certificate",
+      "issuer": "Microsoft",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
+      "credential_id": "FRANCKMBE-2082"
     }
-  ]
+  ],
+
+  "contact": {
+    "cdiMessage": "Recruiters, managers or freelance clients: I am available to discuss any permanent contract or data mission opportunities."
+  }
 }

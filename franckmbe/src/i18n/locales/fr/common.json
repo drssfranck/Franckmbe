@@ -6,6 +6,7 @@
     "experience": "Expérience",
     "projects": "Projets",
     "services": "Services",
+    "certifications": "Certifications",
     "contact": "Contact",
     "cv": "CV",
     "hire": "Me recruter"
@@ -18,7 +19,7 @@
     "tag": "Disponible CDI — Septembre 2026 · Paris <50km · Télétravail OK",
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
-    "description": "Passionné par la donnée, spécialisé en Big Data, Business Intelligence et Data Engineering. Je transforme des données brutes en décisions stratégiques — avec Python, Power BI et l'écosystème Azure.",
+    "description": "Passionné par la donnée, spécialisé dans la transformation de données en leviers de décision stratégique. J'aide les entreprises à structurer leurs données, automatiser leurs pipelines ETL et construire des dashboards décisionnels performants avec Python, SQL, Power BI et l'écosystème Azure. Objectif : transformer la donnée brute en avantage compétitif mesurable.",
     "downloadCV": "Télécharger mon CV",
     "contact": "Me contacter",
     "linkedin": "LinkedIn"

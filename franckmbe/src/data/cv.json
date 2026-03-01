@@ -40,12 +40,12 @@
       "type": "Alternance",
       "environment": ["Azure", "Databricks", "Power BI", "SAP"],
       "missions": [
-        "Conception d’un datamart d’historisation des paiements bloqués (Held Payment) avec modélisation en étoile (Star Schema)",
-        "Développement et automatisation d’un dashboard Power BI pour le pilotage des performances des équipes de recouvrement (remplacement d’un reporting Excel manuel mensuel)",
-        "Création de requêtes SQL avancées sous Databricks pour le suivi des plans d’apurement et intégration dans Power BI",
-        "Mise en place d’un système automatisé de gestion et de conformité des utilisateurs Databricks via Microsoft Entra ID et SCIM API (ajout, suppression logique, contrôle quotidien des accès)",
-        "Extraction et consolidation de données SAP et Databricks pour le calcul et l’analyse de la Cash Curve (suivi trésorerie)",
-        "Développement de pipelines de transformation en PySpark et orchestration via Databricks Jobs"
+        "Conception et déploiement d'un datamart dédié au suivi des paiements bloqués, en utilisant une modélisation en étoile (Star Schema) pour optimiser les temps de requête de 30% et faciliter l'analyse par les équipes métier.",
+        "Automatisation d'un tableau de bord de pilotage des performances du recouvrement sous Power BI, remplaçant un process Excel manuel de 2 jours par mois, offrant désormais une vue en temps réel aux managers.",
+        "Développement de requêtes SQL complexes et de vues matérialisées dans Databricks pour le suivi dynamique des plans d'apurement, intégrées en temps réel dans Power BI pour un reporting précis et à jour.",
+        "Mise en place d'un système de gouvernance des accès Databricks via Microsoft Entra ID et l'API SCIM, automatisant l'audit et la conformité des utilisateurs et réduisant les risques de sécurité.",
+        "Ingénierie d'un pipeline de données en PySpark pour consolider les flux financiers issus de SAP et Databricks, permettant le calcul automatisé et l'analyse de la Cash Curve pour la direction financière.",
+        "Orchestration de pipelines de transformation de données robustes via les Jobs Databricks, garantissant la fiabilité et la fraîcheur des données pour les équipes de recouvrement et de finance."
       ],
       "technologies": [
         "Python",
@@ -66,9 +66,9 @@
       "period": "2025",
       "type": "Mission",
       "missions": [
-        "Développement d’un dashboard analytique avec Streamlit connecté à MySQL",
-        "Nettoyage et transformation des données via scripts Python",
-        "Présentation d’insights produit aux équipes décisionnelles"
+        "Création d'une application d'analyse interactive avec Streamlit, connectée à une base MySQL, offrant aux équipes produit une vue unifiée des KPI de performance en temps réel.",
+        "Automatisation des processus de nettoyage et de préparation des données via des scripts Python, réduisant le temps de traitement manuel et améliorant la qualité des données pour l'analyse.",
+        "Traduction de besoins métier complexes en tableaux de bord intuitifs, facilitant la prise de décision stratégique pour le lancement de nouvelles fonctionnalités."
       ],
       "technologies": ["Python", "Streamlit", "MySQL"]
     },
@@ -78,10 +78,9 @@
       "period": "2025",
       "type": "Projet Data Engineering",
       "missions": [
-        "Construction de pipelines ETL de bout en bout",
-        "Intégration Azure Data Lake pour stockage et transformation",
-        "Implémentation de l’architecture Medallion (Bronze/Silver/Gold)",
-        "Création de dashboards via Microsoft Fabric"
+        "Conception et mise en œuvre de pipelines ETL complets, de l'ingestion de sources hétérogènes jusqu'à la mise à disposition des données dans un data lake.",
+        "Implémentation de l'architecture Medallion (Bronze, Silver, Gold) sur Azure Data Lake pour structurer et fiabiliser les données, garantissant leur traçabilité et leur qualité.",
+        "Développement de modèles sémantiques dans Microsoft Fabric pour alimenter des dashboards décisionnels, offrant une vue à 360° sur les indicateurs de performance du projet."
       ],
       "technologies": ["Azure Data Lake", "ETL", "Microsoft Fabric"]
     },
@@ -90,10 +89,10 @@
       "company": "Fast And Sure Travel",
       "period": "2021 – 2025",
       "missions": [
-        "Analyse CRM et ERP pour extraction d’insights stratégiques",
-        "Création de dashboards KPI sous Power BI",
-        "Animation de workshops métiers",
-        "Formation des équipes aux outils BI"
+        "Pilotage de l'analyse des données CRM et ERP pour identifier des leviers de croissance, aboutissant à l'optimisation de campagnes marketing et une augmentation de la fidélisation client.",
+        "Développement et maintenance de dashboards KPI sous Power BI, utilisés quotidiennement par la direction pour suivre l'activité et ajuster la stratégie.",
+        "Animation d'ateliers de cadrage avec les métiers pour formaliser les besoins et prioriser les développements, assurant une parfaite adéquation entre la solution technique et les enjeux business.",
+        "Conception et animation de sessions de formation aux outils BI pour les équipes opérationnelles, favorisant l'adoption de la culture data et l'autonomie des utilisateurs."
       ],
       "technologies": ["Power BI", "Excel", "CRM", "ERP"]
     },
@@ -102,9 +101,9 @@
       "company": "FOCEP",
       "period": "2019 – 2021",
       "missions": [
-        "Maintenance systèmes et postes utilisateurs",
-        "Gestion infrastructure réseau",
-        "Sécurisation des postes et support IT"
+        "Gestion et maintenance préventive et curative de l'infrastructure systèmes et réseaux de l'entreprise, assurant une disponibilité de 99.9% des services.",
+        "Déploiement et sécurisation des postes de travail, incluant la mise en place de politiques de sauvegarde et de sécurité pour prévenir les pertes de données.",
+        "Support technique de proximité auprès de 150 utilisateurs, avec un taux de satisfaction de 95% sur la résolution des incidents."
       ],
       "technologies": ["Réseau", "Sécurité SI", "Support IT"]
     }
@@ -190,6 +189,34 @@
     "location": "Paris / Full Remote",
     "start_date": "Septembre 2026"
   },
+
+  "certifications": [
+    {
+      "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Certificat Microsoft"
+    },
+    {
+      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Certificat Microsoft"
+    },
+    {
+      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
+      "type": "credly",
+      "issuer": "Microsoft",
+      "displayText": "Certificat Microsoft"
+    },
+    {
+      "type": "microsoft-learn",
+      "title": "Certificat Microsoft Learn",
+      "issuer": "Microsoft",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
+      "credential_id": "FRANCKMBE-2082"
+    }
+  ],
 
   "contact": {
     "cdiMessage": "Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data."

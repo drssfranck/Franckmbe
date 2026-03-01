@@ -93,6 +93,24 @@ const CVPage = () => {
                   <span className="cv-pill" key={i}>{lang.language} · {lang.level}</span>
                 ))}
               </div>
+
+              <div className="cv-section-title">Certifications</div>
+              <div style={{fontSize:'0.8rem', color:'#374151', lineHeight:'1.8'}}>
+                {cvData.certifications && cvData.certifications.map((cert, i) => (
+                  <div key={i} style={{marginBottom:'0.8em'}}>
+                    {cert.type === 'credly' && (
+                      <div>
+                        <strong>{cert.issuer}</strong> - {cert.displayText} (Credly)
+                      </div>
+                    )}
+                    {cert.type === 'microsoft-learn' && (
+                      <div>
+                        <strong>{cert.issuer}</strong> - <a href={cert.url} target="_blank" rel="noopener noreferrer" style={{color:'#2563eb', textDecoration:'underline'}}>{cert.title}</a>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
