@@ -1,15 +1,15 @@
 {
   "name": "Franck MBE",
-  "title": "Data Analyst Junior",
-  "location": "Paris (<50km)",
+  "title": "Data Engineer & Analyst",
+  "location": "France",
   "email": "drssfranck@gmail.com",
   "phone": "+33 6 43 74 68 40",
   "linkedin": "https://linkedin.com/in/imbe",
   "github": "https://github.com/franckmbe",
   "portfolio": "https://franckmbe-gnw9.vercel.app/",
-  "availability": "CDI - Septembre 2026",
+  "availability": "CDI - Novembre 2026",
 
-  "profile": "Passionné par l’analyse de données et la valorisation des insights business. Forte expertise en Data Engineering, BI et cloud Azure. Spécialisé dans la conception de pipelines ETL, la modélisation de données et l’automatisation de reporting. Je recherche un CDI dès septembre 2026 pour contribuer à des projets à fort enjeu stratégique.",
+  "profile": "Data Engineer & Analyst spécialisé en architecture data et automatisation BI. 5+ années d'expérience dans la conception de pipelines ETL robustes, la modélisation de données et la création de dashboards décisionnels. Expert en cloud Azure, Databricks et Snowflake. Passionné par la transformation des données brutes en insights stratégiques pour piloter la croissance business. Je recherche un CDI dans toute la France à partir de novembre 2026 pour contribuer à des projets data à fort enjeu stratégique avec responsabilité pleine.",
   "hero": {
     "stats": [
       { "value": "5+", "label": "Années XP" },
@@ -93,17 +93,6 @@
         "Conception et animation de sessions de formation aux outils BI pour les équipes opérationnelles, favorisant l'adoption de la culture data et l'autonomie des utilisateurs."
       ],
       "technologies": ["Power BI", "Excel", "CRM", "ERP"]
-    },
-    {
-      "title": "Technicien Informatique",
-      "company": "FOCEP",
-      "period": "2019 – 2021",
-      "missions": [
-        "Gestion et maintenance préventive et curative de l'infrastructure systèmes et réseaux de l'entreprise, assurant une disponibilité de 99.9% des services.",
-        "Déploiement et sécurisation des postes de travail, incluant la mise en place de politiques de sauvegarde et de sécurité pour prévenir les pertes de données.",
-        "Support technique de proximité auprès de 150 utilisateurs, avec un taux de satisfaction de 95% sur la résolution des incidents."
-      ],
-      "technologies": ["Réseau", "Sécurité SI", "Support IT"]
     }
   ],
 
@@ -155,6 +144,20 @@
           { "name": "Power Query", "level": 75 }
         ]
       }
+    ],
+    "soft_skills": [
+      { "name": "Travail en équipe", "icon": "👥" },
+      { "name": "Communication", "icon": "💬" },
+      { "name": "Leadership", "icon": "🎯" },
+      { "name": "Résolution de problèmes", "icon": "🔧" },
+      { "name": "Autonomie", "icon": "⚡" },
+      { "name": "Adaptabilité", "icon": "🔄" },
+      { "name": "Gestion de projets", "icon": "📋" },
+      { "name": "Pédagogie", "icon": "📚" }
+    ],
+    "langues": [
+      { "language": "Français", "level": "C2 - Langue maternelle" },
+      { "language": "Anglais", "level": "B2 - Intermédiaire avancé" }
     ]
   },
 
@@ -200,16 +203,35 @@
 
   "certifications": [
     {
+      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
+      "type": "credly",
+      "issuer": "Amazon Web Services Training and Certification",
+      "displayText": "AWS Academy Graduate - Cloud Foundations",
+      "date": "Mai 2025",
+      "verification_url": "https://www.credly.com/badges/76f3df63-7d53-40cb-ad27-08fb035d08db/public_url"
+    },
+    {
+      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
+      "type": "credly",
+      "issuer": "Amazon Web Services Training and Certification",
+      "displayText": "AWS Academy Graduate - Data Center Technician",
+      "date": "Juin 2025",
+      "verification_url": "https://www.credly.com/badges/d76dc236-1bac-47f5-9092-79bf18d12528/public_url"
+    },
+    {
       "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
       "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "PL-300 Power BI Data Analyst Associate",
+      "issuer": "Cisco / OpenEDG Python Institute",
+      "displayText": "Python Essentials 1",
+      "date": "Février 2026",
       "verification_url": "https://www.credly.com/badges/ad489a08-96ec-41e5-8962-69b64739a4cd/public_url"
     },
     {
       "type": "microsoft-learn",
-      "title": "Certificat Microsoft Learn - Power BI",
+      "title": "Microsoft Learn - Power BI Data Analyst",
       "issuer": "Microsoft",
+      "displayText": "Microsoft Learn - Power BI Data Analyst",
+      "date": "2025",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
       "credential_id": "FRANCKMBE-2082",
       "verification_url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1"
@@ -220,6 +242,44 @@
     "cdiMessage": "Recruteur, manager ou freelance client : je suis disponible pour discuter de toute opportunité CDI ou mission data.",
     "portfolio": "https://franckmbe-gnw9.vercel.app/"
   },
+  "services": [
+    {
+      "icon": "📚",
+      "title": "Formations & Mentoring Data",
+      "description": "Accompagnement personnalisé pour démarrer en Data Science, Data Engineering et Business Intelligence. Aide aux projets académiques et construire un portfolio professionnel.",
+      "color": "rgba(59, 130, 246, 0.15)"
+    },
+    {
+      "icon": "📊",
+      "title": "Dashboards & Rapports BI",
+      "description": "Création de tableaux de bord interactifs avec Power BI, Tableau ou Streamlit. Transformation de données brutes en insights visuels et actionnables pour décideurs.",
+      "color": "rgba(34, 197, 94, 0.15)"
+    },
+    {
+      "icon": "🔄",
+      "title": "Pipelines ETL & Data Engineering",
+      "description": "Conception et développement de pipelines de données robustes. Automatisation du traitement des données et intégration de sources multiples.",
+      "color": "rgba(168, 85, 247, 0.15)"
+    },
+    {
+      "icon": "🎓",
+      "title": "Préparation à l'Emploi Data",
+      "description": "Aide pour construire un portfolio, préparer entretiens techniques, optimiser CV et LinkedIn. Conseils sur les certifications essentielles et les tendances du marché data.",
+      "color": "rgba(249, 115, 22, 0.15)"
+    },
+    {
+      "icon": "🔍",
+      "title": "Analyse de Données & SQL",
+      "description": "Requêtes SQL complexes, modélisation de données, analyse exploratoire. Extraction et analyse d'insights à partir de bases de données volumineuses.",
+      "color": "rgba(236, 72, 153, 0.15)"
+    },
+    {
+      "icon": "💻",
+      "title": "Développement Python Data",
+      "description": "Scripts Python pour l'automatisation, nettoyage de données, scripts d'analyse. Utilisation de pandas, NumPy, Scikit-learn pour des projets data concrets.",
+      "color": "rgba(14, 165, 233, 0.15)"
+    }
+  ],
   "interests": [
     "Veille technologique", "Hackathons", "Open Data", "Sport", "Voyages"
   ]

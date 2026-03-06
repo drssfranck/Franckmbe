@@ -1,15 +1,15 @@
 {
   "name": "Franck MBE",
-  "title": "Junior Data Analyst",
-  "location": "Paris (<50km)",
+  "title": "Data Engineer & Analyst",
+  "location": "France",
   "email": "drssfranck@gmail.com",
   "phone": "+33 6 43 74 68 40",
   "linkedin": "https://linkedin.com/in/imbe",
   "github": "https://github.com/franckmbe",
   "portfolio": "https://franckmbe-gnw9.vercel.app/",
-  "availability": "Permanent Contract - September 2026",
+  "availability": "Permanent Contract - November 2026",
 
-  "profile": "Passionate about data analysis and business insights. Strong expertise in Data Engineering, BI and Azure cloud. Specialized in ETL pipeline design, data modeling and reporting automation. Looking for a permanent position from September 2026 to contribute to high-impact projects.",
+  "profile": "Data Engineer & Analyst specializing in data architecture and BI automation. 5+ years of experience designing robust ETL pipelines, data modeling, and creating strategic dashboards. Expert in Azure cloud, Databricks, and Snowflake. Passionate about transforming raw data into strategic insights that drive business growth. Looking for a permanent contract across France starting November 2026 to contribute to high-impact data projects with full responsibility.",
 
   "hero": {
     "stats": [
@@ -31,13 +31,65 @@
   },
 
   "skills": {
-    "technical": [
-      "Python", "SQL", "Power BI", "Tableau", "Advanced Excel", "ETL", "Azure", "Databricks", "Snowflake", "DAX", "Git", "Jupyter", "Streamlit"
+    "categories": [
+      {
+        "name": "Programming Languages",
+        "icon": "💻",
+        "color": "rgba(59, 130, 246, 0.1)",
+        "items": [
+          { "name": "Python", "level": 90 },
+          { "name": "SQL", "level": 85 },
+          { "name": "PySpark", "level": 70 },
+          { "name": "NoSQL", "level": 60 }
+        ]
+      },
+      {
+        "name": "BI & Visualization",
+        "icon": "📊",
+        "color": "rgba(34, 197, 94, 0.1)",
+        "items": [
+          { "name": "Power BI", "level": 90 },
+          { "name": "Tableau", "level": 80 },
+          { "name": "DAX", "level": 80 },
+          { "name": "Streamlit", "level": 85 }
+        ]
+      },
+      {
+        "name": "Cloud & Data Engineering",
+        "icon": "☁️",
+        "color": "rgba(168, 85, 247, 0.1)",
+        "items": [
+          { "name": "Azure Data Lake", "level": 85 },
+          { "name": "Microsoft Fabric", "level": 80 },
+          { "name": "Databricks", "level": 80 },
+          { "name": "Snowflake", "level": 75 }
+        ]
+      },
+      {
+        "name": "Tools & Data",
+        "icon": "🛠️",
+        "color": "rgba(249, 115, 22, 0.1)",
+        "items": [
+          { "name": "ETL Pipelines", "level": 90 },
+          { "name": "Medallion Architecture", "level": 80 },
+          { "name": "Star Schema Modeling", "level": 80 },
+          { "name": "Git", "level": 85 },
+          { "name": "Advanced Excel", "level": 80 },
+          { "name": "Power Query", "level": 75 }
+        ]
+      }
     ],
-    "soft": [
-      "Analytical thinking", "Problem solving", "Communication", "Curiosity", "Adaptability", "Autonomy", "Time management", "Pedagogy", "Team spirit"
+    "soft_skills": [
+      { "name": "Teamwork", "icon": "👥" },
+      { "name": "Communication", "icon": "💬" },
+      { "name": "Leadership", "icon": "🎯" },
+      { "name": "Problem Solving", "icon": "🔧" },
+      { "name": "Autonomy", "icon": "⚡" },
+      { "name": "Adaptability", "icon": "🔄" },
+      { "name": "Project Management", "icon": "📋" },
+      { "name": "Teaching Skills", "icon": "📚" }
     ],
-    "languages": [
+    "langues": [
       { "language": "French", "level": "C2 - Native" },
       { "language": "English", "level": "B2 - Intermediate" }
     ]
@@ -106,70 +158,8 @@
         "Design and delivery of BI tool training sessions for operational teams, promoting data culture adoption and user autonomy."
       ],
       "technologies": ["Power BI", "Excel", "CRM", "ERP"]
-    },
-    {
-      "title": "IT Technician",
-      "company": "FOCEP",
-      "period": "2019 – 2021",
-      "missions": [
-        "Preventive and corrective maintenance of the company's systems and network infrastructure, ensuring 99.9% service availability.",
-        "Deployment and security of workstations, including implementation of backup and security policies to prevent data loss.",
-        "On-site technical support for 150 users, with a 95% satisfaction rate on incident resolution."
-      ],
-      "technologies": ["Network", "IT Security", "IT Support"]
     }
   ],
-
-  "skills": {
-    "categories": [
-      {
-        "name": "Programming Languages",
-        "icon": "💻",
-        "color": "rgba(59, 130, 246, 0.1)",
-        "items": [
-          { "name": "Python", "level": 90 },
-          { "name": "SQL", "level": 85 },
-          { "name": "PySpark", "level": 70 },
-          { "name": "NoSQL", "level": 60 }
-        ]
-      },
-      {
-        "name": "BI & Visualization",
-        "icon": "📊",
-        "color": "rgba(34, 197, 94, 0.1)",
-        "items": [
-          { "name": "Power BI", "level": 90 },
-          { "name": "Tableau", "level": 80 },
-          { "name": "DAX", "level": 80 },
-          { "name": "Streamlit", "level": 85 }
-        ]
-      },
-      {
-        "name": "Cloud & Data Engineering",
-        "icon": "☁️",
-        "color": "rgba(168, 85, 247, 0.1)",
-        "items": [
-          { "name": "Azure Data Lake", "level": 85 },
-          { "name": "Microsoft Fabric", "level": 80 },
-          { "name": "Databricks", "level": 80 },
-          { "name": "Snowflake", "level": 75 }
-        ]
-      },
-      {
-        "name": "Tools & Data",
-        "icon": "🛠️",
-        "color": "rgba(249, 115, 22, 0.1)",
-        "items": [
-          { "name": "ETL Pipelines", "level": 90 },
-          { "name": "Medallion Architecture", "level": 80 },
-          { "name": "Star Schema Modeling", "level": 80 },
-          { "name": "Git", "level": 85 },
-          { "name": "Advanced Excel", "level": 80 },
-          { "name": "Power Query", "level": 75 }
-        ]
-      }
-    ]
-  },
 
   "education": [
     {
@@ -208,21 +198,40 @@
       "Analytics Engineer"
     ],
     "location": "Paris / Full Remote",
-    "start_date": "September 2026"
+    "start_date": "November 2026"
   },
 
   "certifications": [
     {
+      "id": "76f3df63-7d53-40cb-ad27-08fb035d08db",
+      "type": "credly",
+      "issuer": "Amazon Web Services Training and Certification",
+      "displayText": "AWS Academy Graduate - Cloud Foundations",
+      "date": "May 2025",
+      "verification_url": "https://www.credly.com/badges/76f3df63-7d53-40cb-ad27-08fb035d08db/public_url"
+    },
+    {
+      "id": "d76dc236-1bac-47f5-9092-79bf18d12528",
+      "type": "credly",
+      "issuer": "Amazon Web Services Training and Certification",
+      "displayText": "AWS Academy Graduate - Data Center Technician",
+      "date": "June 2025",
+      "verification_url": "https://www.credly.com/badges/d76dc236-1bac-47f5-9092-79bf18d12528/public_url"
+    },
+    {
       "id": "ad489a08-96ec-41e5-8962-69b64739a4cd",
       "type": "credly",
-      "issuer": "Microsoft",
-      "displayText": "PL-300 Power BI Data Analyst Associate",
+      "issuer": "Cisco / OpenEDG Python Institute",
+      "displayText": "Python Essentials 1",
+      "date": "February 2026",
       "verification_url": "https://www.credly.com/badges/ad489a08-96ec-41e5-8962-69b64739a4cd/public_url"
     },
     {
       "type": "microsoft-learn",
-      "title": "Microsoft Learn Certificate - Power BI",
+      "title": "Microsoft Learn - Power BI Data Analyst",
       "issuer": "Microsoft",
+      "displayText": "Microsoft Learn - Power BI Data Analyst",
+      "date": "2025",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1",
       "credential_id": "FRANCKMBE-2082",
       "verification_url": "https://learn.microsoft.com/api/credentials/share/fr-fr/FRANCKMBE-2082/246131B70B32B6E7?sharingId=C495F9FD15CF01B1"
@@ -233,6 +242,44 @@
     "cdiMessage": "Recruiters, managers or freelance clients: I am available to discuss any permanent contract or data mission opportunities.",
     "portfolio": "https://franckmbe-gnw9.vercel.app/"
   },
+  "services": [
+    {
+      "icon": "📚",
+      "title": "Data Training & Mentoring",
+      "description": "Personalized guidance to start in Data Science, Data Engineering and Business Intelligence. Help with academic projects and build a professional portfolio.",
+      "color": "rgba(59, 130, 246, 0.15)"
+    },
+    {
+      "icon": "📊",
+      "title": "BI Dashboards & Reports",
+      "description": "Creation of interactive dashboards with Power BI, Tableau or Streamlit. Transform raw data into visual and actionable insights for decision makers.",
+      "color": "rgba(34, 197, 94, 0.15)"
+    },
+    {
+      "icon": "🔄",
+      "title": "ETL & Data Engineering Pipelines",
+      "description": "Design and development of robust data pipelines. Automation of data processing and integration of multiple sources.",
+      "color": "rgba(168, 85, 247, 0.15)"
+    },
+    {
+      "icon": "🎓",
+      "title": "Data Job Preparation",
+      "description": "Help building a portfolio, preparing technical interviews, optimizing CV and LinkedIn. Advice on essential certifications and data market trends.",
+      "color": "rgba(249, 115, 22, 0.15)"
+    },
+    {
+      "icon": "🔍",
+      "title": "Data Analysis & SQL",
+      "description": "Complex SQL queries, data modeling, exploratory analysis. Extract and analyze insights from large databases.",
+      "color": "rgba(236, 72, 153, 0.15)"
+    },
+    {
+      "icon": "💻",
+      "title": "Python Data Development",
+      "description": "Python scripts for automation, data cleaning, analysis scripts. Using pandas, NumPy, Scikit-learn for real data projects.",
+      "color": "rgba(14, 165, 233, 0.15)"
+    }
+  ],
   "interests": [
     "Tech watch", "Hackathons", "Open Data", "Sports", "Travel"
   ]

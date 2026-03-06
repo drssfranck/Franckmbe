@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.pdf$
+
+Sitemap: https://franckmbe.dev/sitemap.xml
+
+# Google Search Console
+User-agent: Googlebot
+Allow: /
+
+# Respect crawl delay
+Crawl-delay: 1

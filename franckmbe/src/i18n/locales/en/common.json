@@ -12,11 +12,11 @@
     "hire": "Hire me"
   },
   "available": {
-    "badge": "Available Sept. 2026",
-    "full": "Available for permanent contract — September 2026"
+    "badge": "Available Nov. 2026",
+    "full": "Available for permanent contract — November 2026"
   },
   "hero": {
-    "tag": "Available for permanent contract — September 2026 · Paris <50km · Remote OK",
+    "tag": "Available for permanent contract — November 2026 · Nationwide · Remote OK",
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
     "description": "Passionate about data, specializing in turning data into strategic decision-making drivers. I help organizations structure their data, automate ETL pipelines, and build high-performance decision dashboards using Python, SQL, Power BI, and the Azure ecosystem. My goal: transform raw data into measurable competitive advantage.",
@@ -34,13 +34,13 @@
       "My career spans the entire data value chain: from collection and transformation (ETL pipelines, Azure Data Lake) to visualization and business presentation (Power BI, Tableau, Streamlit).",
       "Bilingual French / English B1-B2, I'm comfortable both in technical environments and presenting insights to non-technical stakeholders."
     ],
-    "highlight": "My goal: join a Data team on a permanent contract in Paris (or full-remote) from September 2026 to contribute to impactful data projects with strong business value.",
-    "cdiTitle": "Seeking Permanent Role — September 2026",
+    "highlight": "My goal: join a Data team on a permanent contract nationwide (or full-remote) from November 2026 to contribute to impactful data projects with strong business value.",
+    "cdiTitle": "Seeking Permanent Role — November 2026",
     "cdiSubtitle": "Profile available at end of apprenticeship",
     "cdiItems": [
       "Data Analyst / BI Analyst",
       "Data Engineer / Analytics Engineer",
-      "Paris Île-de-France (<50km)",
+      "Nationwide (France)",
       "Partial or full remote OK",
       "Sector: All sectors (Energy, Finance, Tech, E-commerce…)"
     ]
@@ -70,15 +70,15 @@
     "messagePlaceholder": "Describe your opportunity or data project...",
     "send": "Send message",
     "success": "Message sent! I'll reply within 24h.",
-    "cdiMessage": "I'm actively seeking a permanent contract as Data Analyst or Data Engineer in Paris. My apprenticeship at ENI France ends in September 2026. Feel free to contact me to discuss."
+    "cdiMessage": "I'm actively seeking a permanent contract as Data Analyst or Data Engineer nationwide. My apprenticeship at ENI France ends in September 2026, and I'm available from November 2026. Feel free to contact me to discuss."
   },
   "footer": {
-    "description": "Data Analyst & Data Engineer passionate about transforming data into strategic decisions. Available for permanent contract September 2026.",
+    "description": "Data Analyst & Data Engineer passionate about transforming data into strategic decisions. Available for permanent contract November 2026.",
     "navigation": "Navigation",
     "contact": "Contact",
     "recruiters": "Recruiters",
     "rights": "All rights reserved",
-    "seo": "Data Analyst Paris CDI 2026",
+    "seo": "Data Analyst CDI France 2026",
     "contactForm": "Contact form",
     "downloadCV": "Download PDF resume",
     "offer": "Submit job offer",

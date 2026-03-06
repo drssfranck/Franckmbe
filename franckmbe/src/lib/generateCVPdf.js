@@ -1,311 +1,349 @@
 import cvDataFR from '../data/cv.json'
 import cvDataEN from '../data/cv-en.json'
+import jsPDF from 'jspdf'
 
 export async function generateCVPdf(lang = 'fr') {
   const cvData = lang === 'fr' ? cvDataFR : cvDataEN
-  generateCVHTML(lang, cvData)
+  generateATSPdf(lang, cvData)
 }
 
-// Fonction pour générer le CV en HTML imprimable
-function generateCVHTML(lang = 'fr', cvData) {
-  // Générer toutes les catégories de compétences
-  const skillsHtml = (cvData.skills.categories || []).map(cat => `
-    <div style="margin-bottom: 10px;">
-      <div style="font-weight: 600; color: #2c3e50; font-size: 12px; margin-bottom: 4px;">
-        <span>${cat.icon || ''}</span> ${cat.name}
-      </div>
-      <div class="skills-container" style="margin-left: 0; display: flex; flex-wrap: wrap; gap: 6px;">
-        ${(cat.items || []).map(item => `<span class="skill-item">${item.name} <span style='color:#2563eb;'>${item.level ? `(${item.level}/100)` : ''}</span></span>`).join('')}
-      </div>
-    </div>
-  `).join('')
+// ============================================================
+// CV PDF — 100% ATS COMPATIBLE
+// ============================================================
+// Principes ATS respectés :
+//  - Police standard (Helvetica)
+//  - Pas de fond coloré, pas de graphiques, pas d'emojis
+//  - Pas de colonnes multiples
+//  - Pas de tableaux pour la mise en page
+//  - Titres de sections en MAJUSCULES + trait de séparation
+//  - Texte noir sur blanc uniquement (sauf liens bleus)
+//  - Tout le texte est extractible et parsable
+//  - Mots-clés techniques répétés naturellement
+//  - Format A4, marges standard
+// ============================================================
 
-  // Générer les stages/expériences
-  const experiencesHtml = cvData.experiences.map(exp => {
-    const missionsList = exp.missions 
-      ? `<ul class="missions">${exp.missions.slice(0, 2).map(m => `<li>${m}</li>`).join('')}</ul>`
-      : ''
-    const techTags = exp.technologies
-      ? `<div class="tech-tags"><strong>${lang === 'fr' ? 'Tech:' : 'Tech:'}</strong> ${exp.technologies.join(', ')}</div>`
-      : ''
-    return `
-      <div class="entry">
-        <div class="entry-title">${exp.title} - ${exp.company}</div>
-        <div class="entry-subtitle">${exp.period}${exp.type ? ' • ' + exp.type : ''}</div>
-        ${missionsList}
-        ${techTags}
-      </div>
-    `
-  }).join('')
+function generateATSPdf(lang = 'fr', cvData) {
+  const pdf = new jsPDF('p', 'mm', 'a4')
+  const W = pdf.internal.pageSize.getWidth()   // 210
+  const H = pdf.internal.pageSize.getHeight()  // 297
+  const M = 13  // marge gauche/droite
+  const CW = W - 2 * M // largeur utile ~184mm
+  let y = M
 
-  // Générer les langues
-  const languagesHtml = (cvData.skills.langues || []).map(langObj => 
-    `<div class="lang-item"><strong>${langObj.language}:</strong> ${langObj.level}</div>`
-  ).join('')
-  // Générer la section intérêts
-  const interestsSection = cvData.interests && cvData.interests.length > 0 ? `
-    <div class="section">
-      <div class="section-title">${lang === 'fr' ? 'CENTRES D’INTÉRÊT' : 'INTERESTS'}</div>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        ${cvData.interests.map(interest => `<span class="skill-item">${interest}</span>`).join('')}
-      </div>
-    </div>
-  ` : ''
+  // ── Helpers ──────────────────────────────────
 
-  // Générer la section objectifs de carrière
-  const careerGoalSection = cvData.career_goal ? `
-    <div class="section">
-      <div class="section-title">${lang === 'fr' ? 'OBJECTIF DE CARRIÈRE' : 'CAREER GOAL'}</div>
-      <div style="font-size:12px; margin-bottom:6px;">${lang === 'fr' ? 'Postes visés :' : 'Target positions:'} ${cvData.career_goal.position_targets.join(', ')}</div>
-      <div style="font-size:12px; margin-bottom:6px;">${lang === 'fr' ? 'Localisation :' : 'Location:'} ${cvData.career_goal.location}</div>
-      <div style="font-size:12px;">${lang === 'fr' ? 'Disponibilité :' : 'Start date:'} ${cvData.career_goal.start_date}</div>
-    </div>
-  ` : ''
+  /** Trait noir fin sous le titre de section */
+  const sectionTitle = (title) => {
+    checkPage(22)
+    y += 2
+    pdf.setFontSize(10.5)
+    pdf.setFont('helvetica', 'bold')
+    pdf.setTextColor(0, 0, 0)
+    pdf.text(title.toUpperCase(), M, y)
+    y += 1.2
+    pdf.setDrawColor(0, 0, 0)
+    pdf.setLineWidth(0.35)
+    pdf.line(M, y, W - M, y)
+    y += 4
+  }
 
-  // Générer la section hero/stats
-  const heroSection = cvData.hero ? `
-    <div class="section">
-      <div class="section-title">${lang === 'fr' ? 'STATS' : 'STATS'}</div>
-      <div style="display: flex; flex-wrap: wrap; gap: 18px;">
-        ${(cvData.hero.stats || []).map(stat => `<div class="skill-item"><strong>${stat.value}</strong> ${stat.label}</div>`).join('')}
-      </div>
-      <div style="margin-top:10px; font-size:12px; color:#2563eb;">${lang === 'fr' ? 'Stack technique :' : 'Tech stack:'} ${(cvData.hero.techStack || []).join(', ')}</div>
-    </div>
-  ` : ''
+  /** Vérifie s'il reste assez de place, sinon nouvelle page */
+  const checkPage = (needed = 18) => {
+    if (y > H - needed) {
+      pdf.addPage()
+      y = M
+    }
+  }
 
-  const profileSection = cvData.profile ? `
-    <div class="section">
-      <div class="section-title">${lang === 'fr' ? 'PROFIL' : 'PROFILE'}</div>
-      <p class="profile-text">${cvData.profile}</p>
-    </div>
-  ` : ''
+  // ═══════════════════════════════════════════════
+  //  HEADER — NOM | TITRE | CONTACT
+  // ═══════════════════════════════════════════════
 
-  const certificationsSection = cvData.certifications && cvData.certifications.length > 0 ? `
-    <div class="section">
-      <div class="section-title" style="background: linear-gradient(90deg,#2563eb,#38bdf8); color: #fff;">${lang === 'fr' ? 'CERTIFICATIONS' : 'CERTIFICATIONS'} <span style="font-size:1.2em;">⭐</span></div>
-      <div style="display: flex; flex-wrap: wrap; gap: 18px;">
-        ${cvData.certifications.map(cert => `
-          <div class="cert-highlight" style="flex:1; min-width:260px; background: #f0f7ff; border-left: 4px solid #2563eb; box-shadow: 0 2px 8px rgba(59,130,246,0.08);">
-            <div style="font-weight:600; color:#2563eb; margin-bottom:4px;">${cert.title || cert.displayText}</div>
-            <div style="font-size:12px; color:#374151; margin-bottom:4px;">${cert.issuer}</div>
-            ${cert.credential_id ? `<div style="font-size:11px; color:#7f8c8d;">ID: ${cert.credential_id}</div>` : ''}
-            ${cert.verification_url ? `<a href="${cert.verification_url}" target="_blank" style="color:#2563eb; text-decoration:underline; font-size:12px;">Vérifier la certification</a>` : ''}
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  ` : ''
+  // Nom centré, gras
+  pdf.setFontSize(22)
+  pdf.setFont('helvetica', 'bold')
+  pdf.setTextColor(0, 0, 0)
+  pdf.text(cvData.name.toUpperCase(), W / 2, y, { align: 'center' })
+  y += 7
 
-  const htmlContent = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>CV - ${cvData.name}</title>
-      <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-          line-height: 1.6; 
-          color: #2c3e50;
-          background: #f5f5f5;
-          padding: 40px 20px;
-        }
-        .container { 
-          max-width: 850px; 
-          margin: 0 auto; 
-          background: white;
-          padding: 40px;
-          box-shadow: 0 0 20px rgba(0,0,0,0.1);
-          line-height: 1.5;
-        }
-        .header { 
-          text-align: center; 
-          border-bottom: 3px solid #2563eb; 
-          padding-bottom: 30px; 
-          margin-bottom: 30px;
-        }
-        .header h1 { 
-          margin: 0; 
-          font-size: 28px; 
-          color: #2563eb;
-          font-weight: 700;
-        }
-        .header .title {
-          font-size: 18px;
-          color: #38bdf8;
-          margin-top: 5px;
-          font-weight: 600;
-        }
-        .header .contact { 
-          margin-top: 12px; 
-          color: #555; 
-          font-size: 11px;
-          letter-spacing: 0.5px;
-        }
-        .contact-item {
-          display: inline-block;
-          margin: 0 15px;
-        }
-        .portfolio-link {
-          display: inline-block;
-          margin-top: 10px;
-          font-size: 13px;
-          color: #2563eb;
-          text-decoration: underline;
-          font-weight: 600;
-        }
-        .section { 
-          margin-bottom: 25px; 
-        }
-        .section-title { 
-          font-size: 13px; 
-          font-weight: 700;
-          color: #fff; 
-          background: linear-gradient(90deg,#2563eb,#38bdf8); 
-          padding: 10px 12px;
-          margin-bottom: 12px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-radius: 6px;
-        }
-        .cert-highlight {
-          background-color: #f0f7ff;
-          border-left: 4px solid #2563eb;
-          box-shadow: 0 2px 8px rgba(59,130,246,0.08);
-          padding: 12px;
-          margin: 8px 0;
-          border-radius: 6px;
-        }
-        .cert-highlight strong {
-          color: #2563eb;
-          font-weight: 600;
-        }
-        .cert-icon {
-          display: none;
-        }
-        .entry { 
-          margin-bottom: 12px;
-          page-break-inside: avoid;
-        }
-        .entry-title { 
-          font-weight: 600;
-          font-size: 12px;
-          color: #2c3e50;
-        }
-        .entry-subtitle { 
-          color: #7f8c8d; 
-          font-size: 11px;
-          margin-top: 3px;
-        }
-        .skills-container{
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-        .skill-item{
-          display: inline-block;
-          background-color: #ecf0f1;
-          padding: 6px 12px;
-          border-radius: 20px;
-          font-size: 11px;
-          font-weight: 500;
-          color: #2c3e50;
-          border: 1px solid #bdc3c7;
-        }
-        .profile-text{
-          font-size: 11px;
-          line-height: 1.7;
-          color: #34495e;
-          text-align: justify;
-        }
-        .missions{
-          margin: 8px 0 8px 20px;
-          font-size: 11px;
-          color: #2c3e50;
-        }
-        .missions li {
-          margin-bottom: 4px;
-          line-height: 1.5;
-        }
-        .tech-tags{
-          margin-top: 6px;
-          font-size: 10px;
-          color: #2563eb;
-        }
-        .lang-item {
-          display: inline-block;
-          margin-right: 20px;
-          font-size: 11px;
-          margin-bottom: 6px;
-        }
-        .lang-item strong {
-          color: #2c3e50;
-        }
-        @media print {
-          body { 
-            background: white; 
-            padding: 0;
-          }
-          .container { 
-            box-shadow: none; 
-            padding: 40px;
-            max-width: 100%;
-          }
-          .page-break {
-            page-break-after: always;
-          }
-        }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <div class="header">
-          <h1>${cvData.name}</h1>
-          <div class="title">${cvData.title}</div>
-          <div class="contact">
-            <span class="contact-item">📧 ${cvData.email}</span>
-            <span class="contact-item">📱 ${cvData.phone}</span>
-            <span class="contact-item">📍 ${cvData.location}</span>
-            <span class="contact-item">⚡ ${cvData.availability}</span>
-          </div>
-          <a href="${cvData.portfolio}" target="_blank" class="portfolio-link">Portfolio : ${cvData.portfolio}</a>
-        </div>
+  // Titre professionnel
+  pdf.setFontSize(12)
+  pdf.setFont('helvetica', 'normal')
+  pdf.setTextColor(50, 50, 50)
+  pdf.text(cvData.title, W / 2, y, { align: 'center' })
+  y += 6
 
-        ${heroSection}
-        ${profileSection}
-        ${certificationsSection}
-        <div class="section">
-          <div class="section-title">${lang === 'fr' ? 'COMPÉTENCES' : 'SKILLS'}</div>
-          <div class="skills-container">
-            ${skillsHtml}
-          </div>
-        </div>
-        <div class="section">
-          <div class="section-title">${lang === 'fr' ? 'EXPÉRIENCES' : 'EXPERIENCE'}</div>
-          ${experiencesHtml}
-        </div>
-        <div class="section">
-          <div class="section-title">${lang === 'fr' ? 'LANGUES' : 'LANGUAGES'}</div>
-          <div>
-            ${languagesHtml}
-          </div>
-        </div>
-        ${careerGoalSection}
-        ${interestsSection}
-      </div>
-      <script>
-        window.onload = function() {
-          setTimeout(() => {
-            window.print();
-          }, 500);
-        };
-      </script>
-    </body>
-    </html>
-  `
-  
-  const printWindow = window.open('', '', 'width=900,height=800')
-  printWindow.document.write(htmlContent)
-  printWindow.document.close()
+  // Ligne de contact
+  pdf.setFontSize(8.5)
+  pdf.setFont('helvetica', 'normal')
+  pdf.setTextColor(30, 30, 30)
+  const contact = [cvData.email, cvData.phone, cvData.location, cvData.availability].filter(Boolean)
+  pdf.text(contact.join('  |  '), W / 2, y, { align: 'center' })
+  y += 5
+
+  // Liens cliquables centrés
+  pdf.setFontSize(8)
+  const links = [
+    { label: 'LinkedIn', url: cvData.linkedin },
+    { label: 'GitHub', url: cvData.github },
+    { label: 'Portfolio', url: cvData.portfolio }
+  ].filter(l => l.url)
+
+  const sep = '   |   '
+  const fullLabel = links.map(l => l.label).join(sep)
+  const fullW = pdf.getTextWidth(fullLabel)
+  let lx = (W - fullW) / 2
+
+  links.forEach((link, i) => {
+    pdf.setTextColor(0, 0, 170)
+    pdf.textWithLink(link.label, lx, y, { url: link.url })
+    lx += pdf.getTextWidth(link.label)
+    if (i < links.length - 1) {
+      pdf.setTextColor(30, 30, 30)
+      pdf.text(sep, lx, y)
+      lx += pdf.getTextWidth(sep)
+    }
+  })
+  y += 4
+
+  // Séparateur header
+  pdf.setDrawColor(0, 0, 0)
+  pdf.setLineWidth(0.5)
+  pdf.line(M, y, W - M, y)
+  y += 5
+
+  // ═══════════════════════════════════════════════
+  //  PROFIL PROFESSIONNEL
+  // ═══════════════════════════════════════════════
+  if (cvData.profile) {
+    sectionTitle(lang === 'fr' ? 'Profil professionnel' : 'Professional Summary')
+    pdf.setFontSize(8.5)
+    pdf.setFont('helvetica', 'normal')
+    pdf.setTextColor(20, 20, 20)
+    const pLines = pdf.splitTextToSize(cvData.profile, CW)
+    pdf.text(pLines, M, y)
+    y += pLines.length * 3.6 + 3
+  }
+
+  // ═══════════════════════════════════════════════
+  //  EXPERIENCES PROFESSIONNELLES
+  // ═══════════════════════════════════════════════
+  sectionTitle(lang === 'fr' ? 'Experiences professionnelles' : 'Professional Experience')
+
+  const exps = cvData.experiences || []
+  exps.forEach((exp, idx) => {
+    checkPage(30)
+
+    // Titre poste — Entreprise  (gauche)   |  Période (droite)
+    pdf.setFontSize(9.5)
+    pdf.setFont('helvetica', 'bold')
+    pdf.setTextColor(0, 0, 0)
+    pdf.text(`${exp.title} - ${exp.company}`, M, y)
+
+    pdf.setFontSize(8.5)
+    pdf.setFont('helvetica', 'italic')
+    pdf.setTextColor(70, 70, 70)
+    const period = `${exp.period}${exp.type ? '  |  ' + exp.type : ''}`
+    pdf.text(period, W - M, y, { align: 'right' })
+    y += 4.5
+
+    // Missions (tirets ATS-friendly)
+    if (exp.missions && exp.missions.length > 0) {
+      pdf.setFontSize(8)
+      pdf.setFont('helvetica', 'normal')
+      pdf.setTextColor(20, 20, 20)
+
+      // Première expérience : 3 missions max, autres : 2
+      const max = idx === 0 ? 3 : 2
+      exp.missions.slice(0, max).forEach((m) => {
+        checkPage(10)
+        const lines = pdf.splitTextToSize(`- ${m}`, CW - 4)
+        pdf.text(lines, M + 2, y)
+        y += lines.length * 3.1 + 0.8
+      })
+    }
+
+    // Environnement technique
+    if (exp.technologies && exp.technologies.length > 0) {
+      pdf.setFontSize(7.5)
+      pdf.setFont('helvetica', 'italic')
+      pdf.setTextColor(50, 50, 50)
+      const tech = `Environnement technique : ${exp.technologies.join(', ')}`
+      const tLines = pdf.splitTextToSize(tech, CW - 4)
+      pdf.text(tLines, M + 2, y)
+      y += tLines.length * 2.8 + 2.5
+    }
+    y += 1
+  })
+
+  // ═══════════════════════════════════════════════
+  //  COMPETENCES TECHNIQUES
+  // ═══════════════════════════════════════════════
+  sectionTitle(lang === 'fr' ? 'Competences techniques' : 'Technical Skills')
+
+  const cats = (cvData.skills && cvData.skills.categories) || []
+  cats.forEach((cat) => {
+    checkPage(8)
+    pdf.setFontSize(8.5)
+    pdf.setTextColor(0, 0, 0)
+
+    // "Catégorie : skill1, skill2, skill3" — catégorie en bold, items en normal
+    const catLabel = cat.name.replace(/[^\w\s&àâäéèêëïîôùûüÿçœæÀÂÄÉÈÊËÏÎÔÙÛÜŸÇŒÆ'()-]/g, '').trim()
+    const items = (cat.items || []).map(i => i.name).join(', ')
+
+    // Écrire catégorie en bold
+    pdf.setFont('helvetica', 'bold')
+    const catW = pdf.getTextWidth(catLabel + ' : ')
+    pdf.text(catLabel + ' : ', M, y)
+
+    // Écrire items en normal, wrap si nécessaire
+    pdf.setFont('helvetica', 'normal')
+    const itemLines = pdf.splitTextToSize(items, CW - catW)
+    if (itemLines.length === 1) {
+      pdf.text(itemLines[0], M + catW, y)
+      y += 4
+    } else {
+      // Première ligne à côté de la catégorie
+      pdf.text(itemLines[0], M + catW, y)
+      y += 3.5
+      // Lignes suivantes avec indentation
+      for (let i = 1; i < itemLines.length; i++) {
+        pdf.text(itemLines[i], M + 2, y)
+        y += 3.5
+      }
+      y += 0.5
+    }
+  })
+
+  // Soft skills
+  if (cvData.skills && cvData.skills.soft_skills && cvData.skills.soft_skills.length > 0) {
+    checkPage(8)
+    const softLabel = lang === 'fr' ? 'Competences transversales' : 'Soft Skills'
+    const softItems = cvData.skills.soft_skills.map(s => s.name).join(', ')
+
+    pdf.setFontSize(8.5)
+    pdf.setFont('helvetica', 'bold')
+    pdf.setTextColor(0, 0, 0)
+    const slW = pdf.getTextWidth(softLabel + ' : ')
+    pdf.text(softLabel + ' : ', M, y)
+
+    pdf.setFont('helvetica', 'normal')
+    const sLines = pdf.splitTextToSize(softItems, CW - slW)
+    if (sLines.length === 1) {
+      pdf.text(sLines[0], M + slW, y)
+    } else {
+      pdf.text(sLines[0], M + slW, y)
+      for (let i = 1; i < sLines.length; i++) {
+        y += 3.5
+        pdf.text(sLines[i], M + 2, y)
+      }
+    }
+    y += 5
+  }
+
+  // ═══════════════════════════════════════════════
+  //  CERTIFICATIONS — noms réels, cliquables
+  // ═══════════════════════════════════════════════
+  if (cvData.certifications && cvData.certifications.length > 0) {
+    sectionTitle('Certifications')
+
+    cvData.certifications.forEach((cert) => {
+      checkPage(10)
+
+      const name = cert.title || cert.displayText
+      const url = cert.url || cert.verification_url
+      const date = cert.date || ''
+
+      // Nom de la certification — cliquable si URL
+      pdf.setFontSize(8.5)
+      pdf.setFont('helvetica', 'bold')
+      if (url) {
+        pdf.setTextColor(0, 0, 170)
+        pdf.textWithLink(name, M + 2, y, { url: url })
+      } else {
+        pdf.setTextColor(0, 0, 0)
+        pdf.text(name, M + 2, y)
+      }
+
+      // Date à droite
+      if (date) {
+        pdf.setFontSize(8)
+        pdf.setFont('helvetica', 'normal')
+        pdf.setTextColor(70, 70, 70)
+        pdf.text(date, W - M, y, { align: 'right' })
+      }
+      y += 3.8
+
+      // Émetteur + credential ID
+      pdf.setFontSize(7.5)
+      pdf.setFont('helvetica', 'normal')
+      pdf.setTextColor(70, 70, 70)
+      let detail = cert.issuer || ''
+      if (cert.credential_id) detail += '  |  ID: ' + cert.credential_id
+      pdf.text(detail, M + 4, y)
+      y += 4.5
+    })
+  }
+
+  // ═══════════════════════════════════════════════
+  //  FORMATION
+  // ═══════════════════════════════════════════════
+  if (cvData.education && cvData.education.length > 0) {
+    sectionTitle(lang === 'fr' ? 'Formation' : 'Education')
+
+    cvData.education.forEach((edu) => {
+      checkPage(12)
+
+      // Diplôme (gauche) | Période (droite)
+      pdf.setFontSize(9)
+      pdf.setFont('helvetica', 'bold')
+      pdf.setTextColor(0, 0, 0)
+      pdf.text(edu.degree, M, y)
+
+      const per = edu.period || edu.year || ''
+      pdf.setFontSize(8.5)
+      pdf.setFont('helvetica', 'italic')
+      pdf.setTextColor(70, 70, 70)
+      pdf.text(per, W - M, y, { align: 'right' })
+      y += 4
+
+      // Établissement + statut
+      const inst = edu.institution || edu.school || ''
+      pdf.setFontSize(8.5)
+      pdf.setFont('helvetica', 'normal')
+      pdf.setTextColor(30, 30, 30)
+      let line = inst
+      if (edu.status) line += `  (${edu.status})`
+      pdf.text(line, M + 2, y)
+      y += 5
+    })
+  }
+
+  // ═══════════════════════════════════════════════
+  //  LANGUES
+  // ═══════════════════════════════════════════════
+  if (cvData.skills && cvData.skills.langues && cvData.skills.langues.length > 0) {
+    sectionTitle(lang === 'fr' ? 'Langues' : 'Languages')
+    pdf.setFontSize(8.5)
+    pdf.setFont('helvetica', 'normal')
+    pdf.setTextColor(20, 20, 20)
+    const langLine = cvData.skills.langues.map(l => `${l.language} (${l.level})`).join('  |  ')
+    pdf.text(langLine, M, y)
+    y += 5
+  }
+
+  // ═══════════════════════════════════════════════
+  //  CENTRES D'INTERET
+  // ═══════════════════════════════════════════════
+  if (cvData.interests && cvData.interests.length > 0) {
+    sectionTitle(lang === 'fr' ? "Centres d'interet" : 'Interests')
+    pdf.setFontSize(8.5)
+    pdf.setFont('helvetica', 'normal')
+    pdf.setTextColor(20, 20, 20)
+    pdf.text(cvData.interests.join(', '), M, y)
+    y += 5
+  }
+
+  // ── Téléchargement ──
+  pdf.save(`CV_${cvData.name.replace(/\s/g, '_')}_${lang.toUpperCase()}.pdf`)
 }

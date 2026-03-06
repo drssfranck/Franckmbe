@@ -29,7 +29,8 @@ const Footer = () => {
             <ul>
               <li><a href="mailto:drssfranck@gmail.com">drssfranck@gmail.com</a></li>
               <li><a href="tel:+33643746840">+33 6 43 74 68 40</a></li>
-              <li><a href="https://linkedin.com/in/imbe" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://linkedin.com/in/imbe" target="_blank" rel="noopener">🔗 LinkedIn</a></li>
+              <li><a href="https://github.com/franckmbe" target="_blank" rel="noopener">💻 GitHub</a></li>
               <li><a href="#contact">{t('footer.contactForm')}</a></li>
             </ul>
           </div>

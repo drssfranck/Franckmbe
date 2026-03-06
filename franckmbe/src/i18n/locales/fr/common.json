@@ -12,11 +12,11 @@
     "hire": "Me recruter"
   },
   "available": {
-    "badge": "CDI Sept. 2026",
-    "full": "Disponible CDI — Septembre 2026"
+    "badge": "CDI Nov. 2026",
+    "full": "Disponible CDI — Novembre 2026"
   },
   "hero": {
-    "tag": "Disponible CDI — Septembre 2026 · Paris <50km · Télétravail OK",
+    "tag": "Disponible CDI — Novembre 2026 · Toute la France · Télétravail OK",
     "name": "Franck MBE",
     "title": "Data Analyst & Data Engineer",
     "description": "Passionné par la donnée, spécialisé dans la transformation de données en leviers de décision stratégique. J'aide les entreprises à structurer leurs données, automatiser leurs pipelines ETL et construire des dashboards décisionnels performants avec Python, SQL, Power BI et l'écosystème Azure. Objectif : transformer la donnée brute en avantage compétitif mesurable.",
@@ -34,13 +34,13 @@
       "Mon parcours couvre l'ensemble de la chaîne de valeur data : de la collecte et la transformation (pipelines ETL, Azure Data Lake) jusqu'à la visualisation et la présentation métier (Power BI, Tableau, Streamlit).",
       "Bilingue français / anglais B1-B2, je suis à l'aise aussi bien dans des environnements techniques qu'en présentation d'insights à des parties prenantes non-techniques."
     ],
-    "highlight": "Mon objectif: rejoindre une équipe Data dans le cadre d'un CDI à Paris (ou full-remote) à partir de Septembre 2026, pour contribuer à des projets data impactants à fort enjeu business.",
-    "cdiTitle": "Recherche CDI — Septembre 2026",
+    "highlight": "Mon objectif: rejoindre une équipe Data dans le cadre d'un CDI partout en France (ou full-remote) à partir de Novembre 2026, pour contribuer à des projets data impactants à fort enjeu business.",
+    "cdiTitle": "Recherche CDI — Novembre 2026",
     "cdiSubtitle": "Profil disponible dès fin d'alternance",
     "cdiItems": [
       "Data Analyst / BI Analyst",
       "Data Engineer / Analytics Engineer",
-      "Paris Île-de-France (<50km)",
+      "Toute la France",
       "Télétravail partiel ou total OK",
       "Secteur : tous secteurs (Énergie, Finance, Tech, E-commerce…)"
     ]
@@ -70,15 +70,15 @@
     "messagePlaceholder": "Décrivez votre opportunité ou votre projet data...",
     "send": "Envoyer le message",
     "success": "Message envoyé ! Je vous répondrai dans les 24h.",
-    "cdiMessage": "Je suis activement en recherche d'un CDI Data Analyst ou Data Engineer à Paris. Mon alternance chez ENI France se termine en Septembre 2026. N'hésitez pas à me contacter pour discuter."
+    "cdiMessage": "Je suis activement en recherche d'un CDI Data Analyst ou Data Engineer partout en France. Mon alternance chez ENI France se termine en Septembre 2026 et je suis disponible à partir de Novembre 2026. N'hésitez pas à me contacter pour discuter."
   },
   "footer": {
-    "description": "Data Analyst & Data Engineer passionné par la transformation des données en décisions stratégiques. Disponible CDI Septembre 2026.",
+    "description": "Data Analyst & Data Engineer passionné par la transformation des données en décisions stratégiques. Disponible CDI Novembre 2026.",
     "navigation": "Navigation",
     "contact": "Contact",
     "recruiters": "Recruteurs",
     "rights": "Tous droits réservés",
-    "seo": "Data Analyst Paris CDI 2026",
+    "seo": "Data Analyst CDI France 2026",
     "contactForm": "Formulaire de contact",
     "downloadCV": "Télécharger CV PDF",
     "offer": "Proposer une offre CDI",

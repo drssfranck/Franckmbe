@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import profileImage from '../../../assets/images/profile.jpg'
+import LazyImage from '../../../components/ui/LazyImage'
+import AvailabilityBadge from '../../../components/ui/AvailabilityBadge'
 import { useCVData } from '../../../hooks/useCVData'
 import { generateCVPdf } from '../../../lib/generateCVPdf'
 
@@ -36,6 +38,7 @@ const HomePage = () => {
         <div className="hero-content">
           {/* LEFT */}
           <div>
+            <AvailabilityBadge targetDate="2026-11-01" label="✨ CDI dans toute la France • Disponible Novembre 2026" />
             <div className="hero-tag">
               <div className="available-dot"></div>
               🔍 {t('hero.tag')}
@@ -54,6 +57,9 @@ const HomePage = () => {
               <a href="#contact" className="btn-secondary">
                 {t('hero.contact')}
               </a>
+              <a href="https://calendly.com/drssfranck/30min" className="btn-secondary" target="_blank" rel="noopener" title="Planifier un appel">
+                📅 Planifier un appel
+              </a>
               <a href="https://linkedin.com/in/imbe" className="btn-secondary" target="_blank" rel="noopener">
                 {t('hero.linkedin')}
               </a>
@@ -71,7 +77,7 @@ const HomePage = () => {
           {/* RIGHT: Profile Card */}
           <div>
             <div className="hero-card">
-              <img src={profileImage} alt={cvData.name} className="hero-avatar-image" />
+              <LazyImage src={profileImage} alt={cvData.name} className="hero-avatar-image" />
               <div className="hero-card-name">{cvData.name}</div>
               <div className="hero-card-title">{cvData.title}</div>
               <div className="hero-card-info">
