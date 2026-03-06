@@ -9,11 +9,11 @@
   "portfolio": "https://franckmbe-gnw9.vercel.app/",
   "availability": "Permanent Contract - November 2026",
 
-  "profile": "Data Engineer & Analyst specializing in data architecture and BI automation. 5+ years of experience designing robust ETL pipelines, data modeling, and creating strategic dashboards. Expert in Azure cloud, Databricks, and Snowflake. Passionate about transforming raw data into strategic insights that drive business growth. Looking for a permanent contract across France starting November 2026 to contribute to high-impact data projects with full responsibility.",
+  "profile": "Junior Data Engineer & Analyst specializing in data architecture and BI automation. Trained in designing robust ETL pipelines, data modeling, and creating strategic dashboards. Proficient in Azure cloud, Databricks, and Snowflake. Passionate about transforming raw data into strategic insights that drive business growth. Looking for a permanent contract across France starting November 2026 to contribute to high-impact data projects.",
 
   "hero": {
     "stats": [
-      { "value": "5+", "label": "Years XP" },
+      { "value": "1+", "label": "Year XP" },
       { "value": "6+", "label": "Data Projects" },
       { "value": "MBA", "label": "Big Data & AI" },
       { "value": "Paris", "label": "< 50 km" }

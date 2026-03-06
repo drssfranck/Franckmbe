@@ -9,10 +9,10 @@
   "portfolio": "https://franckmbe-gnw9.vercel.app/",
   "availability": "CDI - Novembre 2026",
 
-  "profile": "Data Engineer & Analyst spécialisé en architecture data et automatisation BI. 5+ années d'expérience dans la conception de pipelines ETL robustes, la modélisation de données et la création de dashboards décisionnels. Expert en cloud Azure, Databricks et Snowflake. Passionné par la transformation des données brutes en insights stratégiques pour piloter la croissance business. Je recherche un CDI dans toute la France à partir de novembre 2026 pour contribuer à des projets data à fort enjeu stratégique avec responsabilité pleine.",
+  "profile": "Data Engineer & Analyst junior spécialisé en architecture data et automatisation BI. Formé à la conception de pipelines ETL robustes, la modélisation de données et la création de dashboards décisionnels. Compétent en cloud Azure, Databricks et Snowflake. Passionné par la transformation des données brutes en insights stratégiques pour piloter la croissance business. Je recherche un CDI dans toute la France à partir de novembre 2026 pour contribuer à des projets data à fort enjeu stratégique.",
   "hero": {
     "stats": [
-      { "value": "5+", "label": "Années XP" },
+      { "value": "1+", "label": "Année XP" },
       { "value": "6+", "label": "Projets Data" },
       { "value": "MBA", "label": "Big Data & IA" },
       { "value": "Paris", "label": "< 50 km" }
