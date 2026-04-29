@@ -1,0 +1,45 @@
+{
+  "name": "Franck MBE - Data Analyst & Engineer Portfolio",
+  "short_name": "Franck MBE",
+  "description": "Portfolio professionnel - Data Analyst & Data Engineer - Disponible CDI Septembre 2026 en Île-de-France",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#080c14",
+  "background_color": "#080c14",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["productivity"],
+  "shortcuts": [
+    {
+      "name": "Mon CV",
+      "short_name": "CV",
+      "description": "Consultation du CV",
+      "url": "/cv",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mes Projets",
+      "short_name": "Projets",
+      "description": "Voir mes projets data",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

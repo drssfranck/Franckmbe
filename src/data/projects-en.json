@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Sales Analytics Dashboard",
+    "description": "Interactive Power BI dashboard for e-commerce sales analysis with real-time KPI tracking, customer segmentation and forecasting.",
+    "category": "dashboard",
+    "technologies": ["Power BI", "SQL", "DAX"],
+    "visual": "📊",
+    "gradient": "linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)",
+    "link": "https://github.com/drssfranck/projects",
+    "github": "https://github.com/drssfranck"
+  },
+  {
+    "id": 2,
+    "title": "MLOps Analytics Dashboard",
+    "description": "Streamlit dashboard with DuckDB for sales analytics and machine learning. Complete data science pipeline with real-time visualizations.",
+    "category": "dashboard",
+    "technologies": ["Python", "Streamlit", "DuckDB", "Scikit-learn"],
+    "visual": "🔧",
+    "gradient": "linear-gradient(135deg, #1f2d1f 0%, #16a34a 100%)",
+    "link": "https://github.com/drssfranck/mlops",
+    "github": "https://github.com/drssfranck/mlops"
+  },
+  {
+    "id": 3,
+    "title": "FastAPI Fraud Detection API",
+    "description": "REST API service built with FastAPI to analyze transactions and detect fraudulent anomalies in real-time using machine learning.",
+    "category": "etl",
+    "technologies": ["Python", "FastAPI", "Machine Learning", "SQL"],
+    "visual": "🧠",
+    "gradient": "linear-gradient(135deg, #1a2e1a 0%, #059669 100%)",
+    "link": "https://github.com/drssfranck/FastApi",
+    "github": "https://github.com/drssfranck/FastApi"
+  },
+  {
+    "id": 4,
+    "title": "Snowflake Data Lake Pipeline",
+    "description": "Complete Data Lake architecture with Snowflake, SQL and AWS S3. ANYCOMPANY pipeline with star schema modeling and Bronze/Silver/Gold layers.",
+    "category": "etl",
+    "technologies": ["Snowflake", "SQL", "AWS S3", "Python"],
+    "visual": "❄️",
+    "gradient": "linear-gradient(135deg, #1f1a2e 0%, #7c3aed 100%)",
+    "link": "https://github.com/drssfranck/ANYCOMPANY_LAB",
+    "github": "https://github.com/drssfranck/ANYCOMPANY_LAB"
+  },
+  {
+    "id": 5,
+    "title": "Streamlit Analytics Dashboard",
+    "description": "Web analytics application developed with Streamlit and MySQL to visualize real-time product metrics and KPIs.",
+    "category": "dashboard",
+    "technologies": ["Python", "Streamlit", "MySQL"],
+    "visual": "🚀",
+    "gradient": "linear-gradient(135deg, #1e1e2e 0%, #0891b2 100%)",
+    "link": "https://github.com/drssfranck/fraudbank",
+    "github": "https://github.com/drssfranck/fraudbank"
+  },
+  {
+    "id": 6,
+    "title": "Heart Failure Prediction ML",
+    "description": "Complete machine learning project: predicting the risk of heart failure. Classification using Random Forest and XGBoost models.",
+    "category": "data-viz",
+    "technologies": ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
+    "visual": "📈",
+    "gradient": "linear-gradient(135deg, #2e1e1a 0%, #ea580c 100%)",
+    "link": "https://github.com/drssfranck/heart_failure_project",
+    "github": "https://github.com/drssfranck/heart_failure_project"
+  },
+  {
+    "id": 7,
+    "title": "Library Management Power BI",
+    "description": "Power BI dashboard for library data management and analytics. Tracking loans, inventory and member statistics.",
+    "category": "dashboard",
+    "technologies": ["Power BI", "SQL", "DAX"],
+    "visual": "📚",
+    "gradient": "linear-gradient(135deg, #1e1e2e 0%, #be123c 100%)",
+    "link": "https://github.com/drssfranck/Librairie",
+    "github": "https://github.com/drssfranck/Librairie"
+  },
+  {
+    "id": 8,
+    "title": "Airbnb Data Analysis",
+    "description": "Exploratory data analysis and visualization of Airbnb data. Jupyter notebook with EDA, statistics and market insights.",
+    "category": "data-viz",
+    "technologies": ["Python", "Jupyter", "Pandas", "Matplotlib"],
+    "visual": "🏠",
+    "gradient": "linear-gradient(135deg, #1a2e1f 0%, #0d9488 100%)",
+    "link": "https://github.com/drssfranck/airbnbopendata",
+    "github": "https://github.com/drssfranck/airbnbopendata"
+  }
+]

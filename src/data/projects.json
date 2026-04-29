@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Dashboard Analytics Ventes",
+    "description": "Dashboard interactif Power BI pour l'analyse des ventes e-commerce avec suivi KPI temps réel, segmentation client et prévisions.",
+    "category": "dashboard",
+    "technologies": ["Power BI", "SQL", "DAX"],
+    "visual": "📊",
+    "gradient": "linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)",
+    "link": "https://github.com/drssfranck/projects",
+    "github": "https://github.com/drssfranck"
+  },
+  {
+    "id": 2,
+    "title": "MLOps Dashboard Analytics",
+    "description": "Dashboard Streamlit avec DuckDB pour analyse et ML des ventes. Pipeline complet de data science avec visualisations temps réel.",
+    "category": "dashboard",
+    "technologies": ["Python", "Streamlit", "DuckDB", "Scikit-learn"],
+    "visual": "🔧",
+    "gradient": "linear-gradient(135deg, #1f2d1f 0%, #16a34a 100%)",
+    "link": "https://github.com/drssfranck/mlops",
+    "github": "https://github.com/drssfranck/mlops"
+  },
+  {
+    "id": 3,
+    "title": "API FastAPI Détection Fraude",
+    "description": "Service API REST FastAPI pour analyser les transactions et détecter les anomalies frauduleuses en temps réel avec machine learning.",
+    "category": "etl",
+    "technologies": ["Python", "FastAPI", "Machine Learning", "SQL"],
+    "visual": "🧠",
+    "gradient": "linear-gradient(135deg, #1a2e1a 0%, #059669 100%)",
+    "link": "https://github.com/drssfranck/FastApi",
+    "github": "https://github.com/drssfranck/FastApi"
+  },
+  {
+    "id": 4,
+    "title": "Pipeline Data Lake Snowflake",
+    "description": "Architecture Data Lake complète avec Snowflake, SQL et S3. Pipeline ANYCOMPANY avec modélisation en étoile et Bronze/Silver/Gold.",
+    "category": "etl",
+    "technologies": ["Snowflake", "SQL", "AWS S3", "Python"],
+    "visual": "❄️",
+    "gradient": "linear-gradient(135deg, #1f1a2e 0%, #7c3aed 100%)",
+    "link": "https://github.com/drssfranck/ANYCOMPANY_LAB",
+    "github": "https://github.com/drssfranck/ANYCOMPANY_LAB"
+  },
+  {
+    "id": 5,
+    "title": "Dashboard Streamlit Kasaltech",
+    "description": "Application web analytique développée avec Streamlit et MySQL pour visualiser en temps réel les métriques produit et KPIs.",
+    "category": "dashboard",
+    "technologies": ["Python", "Streamlit", "MySQL"],
+    "visual": "🚀",
+    "gradient": "linear-gradient(135deg, #1e1e2e 0%, #0891b2 100%)",
+    "link": "https://github.com/drssfranck/fraudbank",
+    "github": "https://github.com/drssfranck/fraudbank"
+  },
+  {
+    "id": 6,
+    "title": "Prédiction Défaillance Cardiaque",
+    "description": "Projet Machine Learning complet : prédiction du risque de défaillance cardiaque. Classification avec Random Forest et XGBoost.",
+    "category": "data-viz",
+    "technologies": ["Python", "Machine Learning", "Scikit-learn", "Pandas"],
+    "visual": "📈",
+    "gradient": "linear-gradient(135deg, #2e1e1a 0%, #ea580c 100%)",
+    "link": "https://github.com/drssfranck/heart_failure_project",
+    "github": "https://github.com/drssfranck/heart_failure_project"
+  },
+  {
+    "id": 7,
+    "title": "Gestion Librairie Power BI",
+    "description": "Dashboard Power BI pour gestion et analyse des données de librairie. Suivi des emprunts, inventaire et statistiques membres.",
+    "category": "dashboard",
+    "technologies": ["Power BI", "SQL", "DAX"],
+    "visual": "📚",
+    "gradient": "linear-gradient(135deg, #1e1e2e 0%, #be123c 100%)",
+    "link": "https://github.com/drssfranck/Librairie",
+    "github": "https://github.com/drssfranck/Librairie"
+  },
+  {
+    "id": 8,
+    "title": "Analyse Données Airbnb",
+    "description": "Analyse exploratoire et visualisation des données Airbnb. Jupyter Notebook avec EDA, statistiques et insights marché.",
+    "category": "data-viz",
+    "technologies": ["Python", "Jupyter", "Pandas", "Matplotlib"],
+    "visual": "🏠",
+    "gradient": "linear-gradient(135deg, #1a2e1f 0%, #0d9488 100%)",
+    "link": "https://github.com/drssfranck/airbnbopendata",
+    "github": "https://github.com/drssfranck/airbnbopendata"
+  }
+]
